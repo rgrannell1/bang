@@ -2,6 +2,7 @@
 <xml version=1.0 encoding="UFT-8"?>
 
 <OpenSearchDescription>
+
 	<ShortName>
 		Bang!
 	</ShortName>
@@ -18,7 +19,11 @@
 		en-uk
 	</Language>
 
+    <Developer>
+    	Ryan Grannell
+	</Developer>
+
 	<Url type="text/html"
-		template=" http://127.0.0.1:8125/?q={searchTerms}">
+		template="http://127.0.0.1:8125/?q={searchTerms}">
 
 </OpenSearchDescription>

@@ -28,8 +28,6 @@ var consts = {
 	}
 }
 
-
-
 var redirect = function (searchTerms) {
 	/*
 		string -> string
@@ -80,4 +78,4 @@ http.createServer( function (request, response) {
 } ).
 listen(consts.port)
 
-console.log('bang! js server listening at http://127.0.0.1:8125/')
+console.log('bang! js server listening at http://127.0.0.1:' + consts.port + '/')
