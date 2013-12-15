@@ -1,0 +1,24 @@
+
+<xml version=1.0 encoding="UFT-8"?>
+
+<OpenSearchDescription>
+	<ShortName>
+		Bang!
+	</ShortName>
+
+	<LongName>
+		Bang!
+	</LongName>
+
+	<Description>
+		A bang syntax search redirector for major search engines.
+	</Description>
+
+	<Language>
+		en-uk
+	</Language>
+
+	<Url type="text/html"
+		template="http://localhost/?q={searchTerms}">
+
+</OpenSearchDescription>
