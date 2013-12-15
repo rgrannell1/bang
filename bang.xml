@@ -19,6 +19,6 @@
 	</Language>
 
 	<Url type="text/html"
-		template="http://localhost/?q={searchTerms}">
+		template=" http://127.0.0.1:8125/?q={searchTerms}">
 
 </OpenSearchDescription>

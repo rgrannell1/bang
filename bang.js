@@ -10,12 +10,15 @@ var http = require('http')
 
 var consts = {
 	port: 8125,
-	templates: {
+	engines: {
 		"!w": function (searchTerm) {
 			return "https://en.wikipedia.org/wiki/" + searchTerm
 		},
 		"!g": function (searchTerm) {
 			return "https://encrypted.google.com/search?hl=en&q=" + searchTerm
+		},
+		"!tw": function (searchTerm) {
+			return "https://twitter.com/search?q="+ searchTerm
 		}
 	}
 }
@@ -31,8 +34,8 @@ var redirect = function (searchTerms) {
 		url that queries that given engine.
 	*/
 
-	for (bang in consts.templates) {
-		if (!consts.templates.hasOwnProperty(bang)) {
+	for (bang in consts.engines) {
+		if (!consts.engines.hasOwnProperty(bang)) {
 			continue
 		}
 
@@ -42,16 +45,17 @@ var redirect = function (searchTerms) {
 		if (isMatch) {
 
 			var searchTerms = searchTerms.replace(bang, '')
-			var redirecter = consts.templates[bang]
+			var redirecter = consts.engines[bang]
 
 			return redirecter(searchTerms)
 		}
 	}
 
-	var redirecter = consts.templates['!g']
+	var redirecter = consts.engines['!g']
 
 	return redirecter(searchTerms)
 }
+
 
 
 
