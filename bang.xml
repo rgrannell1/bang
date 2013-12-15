@@ -4,7 +4,6 @@
 	<ShortName>Bang</ShortName>
 	<Description>A bang syntax search redirector for major search engines.</Description>
 	<InputEncoding>UTF-8</InputEncoding>
-	<Url type="text/html" method="method" template="searchURL"></Url>
-	<Url type="application/x-suggestions+json" template="suggestionURL"/>
-	<moz:SearchForm>http://localhost/?q={searchTerms}</moz:SearchForm>
+	 <Url type="text/html"
+		template="http://127.0.0.1:8125/?q={searchTerms}"/>
 </OpenSearchDescription>
