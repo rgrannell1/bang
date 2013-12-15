@@ -2,7 +2,8 @@
 /*
 	Bang! JS
 	A node server for redirecting queries to other search engines.
-
+	Similar to duckduckgo's system for redirecting, but doesn't require
+	relaying through their servers.
 */
 
 var url = require('url')
@@ -10,6 +11,7 @@ var http = require('http')
 
 var consts = {
 	port: 8125,
+	wordBoundary: '(\s|$)',
 	engines: {
 		"!w": function (searchTerm) {
 			return "https://en.wikipedia.org/wiki/" + searchTerm
@@ -19,10 +21,12 @@ var consts = {
 		},
 		"!tw": function (searchTerm) {
 			return "https://twitter.com/search?q="+ searchTerm
+		},
+		"!gh": function (searchTerm) {
+			return "https://github.com/search?q=" + searchTerm + "&ref=cmdform"
 		}
 	}
 }
-
 
 
 
@@ -39,7 +43,7 @@ var redirect = function (searchTerms) {
 			continue
 		}
 
-		var bangRegExp = new RegExp(bang)
+		var bangRegExp = new RegExp(bang + consts.wordBoundary)
 		var isMatch = bangRegExp.test(searchTerms)
 
 		if (isMatch) {
