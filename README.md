@@ -10,6 +10,8 @@ operational in order to redirect your query.
 It is currently only supported for Firefox on Ubuntu, since that's
 my personal setup.
 
+<img src="example.gif" height = "180"> </img>
+
 ### 0 Requirements
 
 * Firefox (tested on 26)
@@ -57,4 +59,3 @@ crontab -e
 
 Obviously substituting that path for the path to the shell script included in
 the bang repository.
-
