@@ -14,7 +14,8 @@ my personal setup.
 
 * Firefox (tested on 26)
 * Ubuntu (tested on 13.10)
-*
+* Node.js v0.10.20
+* Node forever
 
 ### 1 Installation
 

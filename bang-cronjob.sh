@@ -1,7 +1,9 @@
 #!/bin/sh
 
-time=$(date +"%Y-%m-%d %H:%M:%S")
+readableTime=$(date +"%Y-%m-%d %H:%M:%S")
 
-echo initialising bang server $time >> /home/ryan/Code/System_Scripts/log.txt
+$log_path=/home/ryan/Code/System_Scripts/log.txt
+$script_path=/home/ryan/Code/JS_Files/bang/lib/bang.js
 
-forever '/home/ryan/Code/JS_Files/bang/lib/bang.js'
+echo initialising bang server $readableTime >> $log_path
+forever $script_path
