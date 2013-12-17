@@ -3,7 +3,7 @@ Bang!
 
 Bang! (a nod to Bing) is a node application to provide
 query redirection to several search engines using DuckDuckGo-like
-bang operators. The advantages to using Bang! are it defaults to
+bang operators. The advantages to using Bang! over DuckDuckGo are that it defaults to
 Google search, and that your query is not relayed through an intermediate
 server since Bang! is locally hosted.
 
