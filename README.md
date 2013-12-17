@@ -10,7 +10,7 @@ operational in order to redirect your query.
 It is currently only supported for Firefox on Ubuntu, since that's
 my personal setup.
 
-<img src="example.gif" height = "180"> </img>
+<img src="example.gif"> </img>
 
 ### 0 Requirements
 
