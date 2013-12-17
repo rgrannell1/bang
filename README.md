@@ -1,14 +1,13 @@
 Bang!
 ===========
 
-Bang! (a nod to Bing) is a node js application to provide
+Bang! (a nod to Bing) is a node application to provide
 query redirection to several search engines using DuckDuckGo-like
 bang operators. The advantages to using Bang! are it defaults to
-Google search, and that it doesn't rely on DuckDuckGo's servers being
-operational in order to redirect your query.
+Google search, and that your query is not relayed through an intermediate
+server since Bang! is locally hosted.
 
-It is currently only supported for Firefox on Ubuntu, since that's
-my personal setup.
+It is currently only supported for Firefox, since that's my browser of choice.
 
 <img src="example.gif"> </img>
 
