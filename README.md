@@ -11,14 +11,14 @@ It is currently only supported for Firefox, since that's my browser of choice.
 
 <img src="example.gif"> </img>
 
-### 0 Requirements
+### 1 Requirements
 
 * Firefox (tested on 26)
 * Ubuntu, or possibly another UNIX distro. (tested on Ubuntu 13.10)
 * Node.js v0.10.20
 * Node forever
 
-### 1 Installation
+### 2 Installation
 
 First, download the repository from github.
 
