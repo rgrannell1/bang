@@ -8,4 +8,4 @@ Changes
 - Added bangs for stackoverflow and sloane sequences.
 
 #### 29th December 2013
-- Added bands for RottenTomatoes.
+- Added bangs for RottenTomatoes.
