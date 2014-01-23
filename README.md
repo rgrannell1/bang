@@ -38,6 +38,10 @@ The node server can then be executed manually (it defaults to running on port
 8125).
 
 ```bash
+sudo apt-get install node npm
+```
+
+```bash
 node lib/bang.js
 ```
 
@@ -58,7 +62,8 @@ crontab -e
 Switching that path for the path to the shell script included in this 
 repository.
 
-After all that hard work you should be ready to go!
+After all you need to reboot to start the cron job, 
+and then you should be ready to go!
 
 ### 3 License
 
