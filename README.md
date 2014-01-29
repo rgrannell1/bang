@@ -50,6 +50,7 @@ after restart using crontab Node forever is required to restart the script
 in the event of a crash, so install it.
 
 ```bash
+sudo apt-get install node npm
 sudo npm install forever -g
 ```
 Now edit the crontab and add the following line to the end
