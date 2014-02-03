@@ -21,3 +21,7 @@ Changes
 ### 7th January 2014
 
 - Added support for duckduckgo.
+
+### 12th January 2013
+
+- Added OED and dictionary.reference support.
