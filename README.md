@@ -38,7 +38,9 @@ The node server can then be executed manually (it defaults to running on port
 8125).
 
 ```bash
-sudo apt-get install node npm
+sudo add-apt-repository ppa:chris-lea/node.js
+sudo apt-get update
+sudo apt-get install nodejs
 ```
 
 ```bash
@@ -50,7 +52,6 @@ after restart using crontab Node forever is required to restart the script
 in the event of a crash, so install it.
 
 ```bash
-sudo apt-get install node npm
 sudo npm install forever -g
 ```
 Now edit the crontab and add the following line to the end
