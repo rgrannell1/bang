@@ -58,7 +58,7 @@ Now edit the crontab and add the following line to the end
 
 ```bash
 crontab -e
-@reboot /home/user/absolute_path_to_bang_cronjob.sh
+@reboot /home/user/absolute_path_to_bang_cronjob.py
 ```
 
 Switching that path for the path to the shell script included in this 

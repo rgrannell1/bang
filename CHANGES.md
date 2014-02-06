@@ -22,6 +22,13 @@ Changes
 
 - Added support for duckduckgo.
 
-### 12th January 2013
+### 12th January 2014
 
 - Added OED and dictionary.reference support.
+
+### 6th February 2014
+
+- Updated the cronjob script to work on every
+computer, not just my own. Rewrote in python.
+- Removed kickasstorrents bang, since it's been
+banned in Ireland.
