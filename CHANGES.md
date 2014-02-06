@@ -32,3 +32,4 @@ Changes
 computer, not just my own. Rewrote in python.
 - Removed kickasstorrents bang, since it's been
 banned in Ireland.
+- Removed install.html, as it is currently broken.

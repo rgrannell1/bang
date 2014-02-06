@@ -27,11 +27,11 @@ git clone https://github.com/rgrannell1/bang
 cd bang
 ```
 
-The firefox plugin can be installed by running install-search.html. This page will 
-prompt you to add Bang! as your default search provider.
+The firefox plugin can be installed by running the following
+from the firebug terminal (f12) at the firefox start screen.
 
-```bash
-firefox install-search.html
+```
+window.external.addSearchProvider("https://raw2.github.com/rgrannell1/bang/master/bang.xml");
 ```
 
 The node server can then be executed manually (it defaults to running on port
