@@ -28,7 +28,8 @@ cd bang
 ```
 
 The firefox plugin can be installed by running the following
-from the firebug terminal (f12) at the firefox start screen.
+from the firebug terminal (F12) at the firefox start screen. This 
+step may be problematic - it didn't seem to work consistently on my Ubuntu Firefox 26.
 
 ```
 window.external.addSearchProvider("https://raw2.github.com/rgrannell1/bang/master/bang.xml");
