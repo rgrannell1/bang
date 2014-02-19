@@ -17,8 +17,7 @@ log_path = directory + "/log.txt"
 bang_script_path = directory + "/lib/bang.js"
 
 logging.basicConfig(
-	filename = log_path,
-	level = logging.DEBUG)
+	filename = log_path, level = logging.DEBUG)
 
 current_time = strftime("%Y-%m-%d %H:%M:%S", gmtime())
 

@@ -33,3 +33,8 @@ computer, not just my own. Rewrote in python.
 - Removed kickasstorrents bang, since it's been
 banned in Ireland.
 - Removed install.html, as it is currently broken.
+
+### 18th January 2014
+
+- Added google "I'm feeling lucky!" search, which
+redirects to their guess for the closest page to your terms.
