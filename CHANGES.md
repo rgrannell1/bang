@@ -38,3 +38,7 @@ banned in Ireland.
 
 - Added google "I'm feeling lucky!" search, which
 redirects to their guess for the closest page to your terms.
+
+### 19th January 2014
+
+- Added support for stack-exchange metasearch.
