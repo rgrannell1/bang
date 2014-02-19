@@ -1,11 +1,14 @@
 Bang!
 ===========
 
-Bang! (a nod to Bing) is a node application to provide
-query redirection to several search engines using DuckDuckGo-like
-bang operators. The advantages to using Bang! over DuckDuckGo are that it defaults to
-Google search, and that your query is not relayed through an intermediate
-server since Bang! is locally hosted.
+Bang! (a nod to Bing) is a metasearch engine. It uses shorthands
+like "!w Alpaca" or "! how to buy an Alpaca" to search other search engines
+and websites and brings you straight to your results.
+
+**Bang!** is inspired by DuckDuckGo's '!' syntax, but with some key differences. **Bang!**
+is locally hosted so your data is not shared with DuckDuckGo during redirection.
+**Bang!** also can redirect to locally hosted webapps running on specific ports using
+"@ 8910" syntax.
 
 It is currently only supported for Firefox, since that's my browser of choice.
 
@@ -28,7 +31,8 @@ cd bang
 ```
 
 The firefox plugin can be installed by running the following
-from the firebug terminal (f12) at the firefox start screen.
+from the firebug terminal (F12) at the firefox start screen. This 
+step may be problematic - it didn't seem to work consistently on my Ubuntu Firefox 26.
 
 ```
 window.external.addSearchProvider("https://raw2.github.com/rgrannell1/bang/master/bang.xml");
