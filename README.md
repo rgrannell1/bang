@@ -1,6 +1,8 @@
 Bang! v0.2.0
 ===========
 
+[![Build Status](https://travis-ci.org/rgrannell1/bang.png?branch=master)](https://travis-ci.org/rgrannell1/bang)
+
 Bang! (a nod to Bing) is a metasearch engine. It uses shorthands
 like "!w Alpaca" or "! how to buy an Alpaca" to search other search engines
 and websites and brings you straight to your results.
