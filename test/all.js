@@ -2,11 +2,35 @@
 const assert = require("assert")
 const enginesFile = require('../lib/engines.js')
 
-const isRegExp = function (rexp) {
-	return Object.prototype.toString.call(rexp) === "[object RegExp]"
+
+is = {
+	regExp:
+		function (val) {
+			return Object.prototype.toString.call(val) === "[object RegExp]"
+		},
+	array:
+		function (val) {
+			return Object.prototype.toString.call(val) === "[object Array]"
+		},
+
 }
 
+const count = function (value, set) {
+	var num = 0
+
+	for (var ith = 0; ith < set.length; ith++) {
+		if (set[ith] === value) {
+			num += 1
+		}
+	}
+
+	return num
+}
+
+
 const engines = enginesFile.engines
+
+var patternSet = []
 
 for (key in engines) {
 	if (!engines.hasOwnProperty(key)) {
@@ -14,11 +38,16 @@ for (key in engines) {
 	}
 
 	var engine = engines[key]
-
-	assert(
-		isRegExp(engine.regexp),
-		"non regular-expression regexpr field" +
-		JSON.stringify(engine, null, 4))
+	patternSet = patternSet.concat(engine.patterns)
 
 }
 
+for (key in patternSet) {
+
+	var pattern = patternSet[key]
+
+	assert(
+		count(pattern, patternSet) === 1,
+		"duplicate bang pattern: " + pattern)
+
+}
