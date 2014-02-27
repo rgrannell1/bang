@@ -42,3 +42,8 @@ redirects to their guess for the closest page to your terms.
 ### 19th January 2014
 
 - Added support for stack-exchange metasearch.
+
+### 26th January 2014
+
+- Added version number 0.2.0, for compatability with node
+package structure.

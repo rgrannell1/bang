@@ -1,4 +1,4 @@
-Bang!
+Bang! v0.2.0
 ===========
 
 Bang! (a nod to Bing) is a metasearch engine. It uses shorthands
@@ -31,7 +31,7 @@ cd bang
 ```
 
 The firefox plugin can be installed by running the following
-from the firebug terminal (F12) at the firefox start screen. This 
+from the firebug terminal (F12) at the firefox start screen. This
 step may be problematic - it didn't seem to work consistently on my Ubuntu Firefox 26.
 
 ```
@@ -52,7 +52,7 @@ node lib/bang.js
 ```
 
 For long-term use it is wise to set the node server to start automatically
-after restart using crontab Node forever is required to restart the script 
+after restart using crontab Node forever is required to restart the script
 in the event of a crash, so install it.
 
 ```bash
@@ -65,10 +65,10 @@ crontab -e
 @reboot /home/user/absolute_path_to_bang_cronjob.py
 ```
 
-Switching that path for the path to the shell script included in this 
+Switching that path for the path to the shell script included in this
 repository.
 
-After all you need to reboot to start the cron job, 
+After all you need to reboot to start the cron job,
 and then you should be ready to go!
 
 ### 3 License

@@ -1,0 +1,15 @@
+{
+	"name":
+		"bang",
+	"version":
+		"0.2.0",
+	"description":
+		"Bang! is a metasearch engine",
+	"scripts": {
+		"test":
+			"node test/all.js"
+	},
+	"devDependencies": {
+		"test": ">=0.0.5"
+	}
+}
