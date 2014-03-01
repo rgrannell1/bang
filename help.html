@@ -1,24 +1,56 @@
 
 <html>
 <head>
-
-	<script type="text/javascript" scr="lib/engines.js"></script>
+	<script type="text/javascript" src="lib/help-data.js"></script>
 	<style type="text/css">
 		/*
 			styling!
 		*/
+		html {
+			background: #EDEDED;
+			font-family: sans-serif;
+			color: #313739;
+		}
 
+		#description {
+			font-style: italic;
+			width: 600px;
+			margin-bottom: 30px;
+		}
 
+		#list-container {
 
+			background: white;
 
+			width: 66%;
+			padding: 25px;
 
+			margin: 5% auto;
+
+			border: 1px solid #313739;
+			border-radius: 10px;
+		}
+
+		td {
+			padding-left: 40px;
+		}
 
 	</style>
 
 </head>
 <body>
 
-	<ul id="bang-list"> </ul>
+	<div id="list-container">
+		<h2>Bang Patterns</h2>
+
+		<p id="description">
+		This is a list of all available bang patterns and their corresponding
+		search engines. These are somewhat liable to change over time.
+		</p>
+
+		<table id="bang-table"> </ul>
+
+	</div>
 
 </body>
 	<script type="text/javascript">
@@ -27,14 +59,43 @@
 		the ul tag above.
 	*/
 
+	const tr = function (inner1, inner2) {
 
+		var elem = document.createElement("tr")
 
+		elem.appendChild(inner1)
+		elem.appendChild(inner2)
 
+		return elem
+	}
 
+	const td = function (text) {
 
+		var elem = document.createElement("td")
 
+		elem.appendChild(document.createTextNode(text))
 
+		return elem
+	}
 
+	var bangTable = document.getElementById("bang-table")
+
+	for (ith in helpData) {
+
+		var engine = helpData[ith]
+		var patternString = engine.
+			patterns.
+			reduce(function (left, right) {
+				return left + ", " + right
+			})
+
+		var hostname = engine.hostName
+
+		bangTable.
+		appendChild(
+			tr( td(patternString), td(hostname) ))
+
+	}
 
 	</script>
 </html>
