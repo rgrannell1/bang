@@ -1,7 +1,7 @@
 
 <html>
 <head>
-	<script type="text/javascript" src="help-data.js"></script>
+	<script type="text/javascript" src="lib/help-data.js"></script>
 	<style type="text/css">
 		/*
 			styling!
@@ -59,27 +59,23 @@
 		the ul tag above.
 	*/
 
-	const tags = {
-		"tr":
-			function (inner1, inner2) {
+	const tr = function (inner1, inner2) {
 
-				var elem = document.createElement("tr")
+		var elem = document.createElement("tr")
 
-				elem.appendChild(inner1)
-				elem.appendChild(inner2)
+		elem.appendChild(inner1)
+		elem.appendChild(inner2)
 
-				return elem
-			},
-		"td":
-			function (text) {
-				var elem = document.createElement("td")
+		return elem
+	}
 
-				elem.appendChild(document.createTextNode(text))
+	const td = function (text) {
 
-				return elem
-			}
+		var elem = document.createElement("td")
 
+		elem.appendChild(document.createTextNode(text))
 
+		return elem
 	}
 
 	var bangTable = document.getElementById("bang-table")
@@ -97,7 +93,7 @@
 
 		bangTable.
 		appendChild(
-			tags.tr( td(patternString), tags.td(hostname) ))
+			tr( td(patternString), td(hostname) ))
 
 	}
 

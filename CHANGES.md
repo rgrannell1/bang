@@ -48,8 +48,12 @@ redirects to their guess for the closest page to your terms.
 - Added version number 0.2.0, for compatability with node
 package structure.
 
-### 3 February 2014
+### 3 March 2014
 
 - Added a locally-hosted helppage under "!about". Incremented
 to 0.3.1.
+
+### 5 March 2014
+
+- Added gmail support.
 
