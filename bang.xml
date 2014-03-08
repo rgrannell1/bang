@@ -5,5 +5,5 @@
 	<Description>A bang syntax search redirector for major search engines.</Description>
 	<InputEncoding>UTF-8</InputEncoding>
 	 <Url type="text/html"
-		template="http://127.0.0.1:8125/?q={searchTerms}"/>
+		template="localhost:8125/?q={searchTerms}"/>
 </OpenSearchDescription>

@@ -1,4 +1,4 @@
-Bang! v0.3.3
+Bang! v0.3.4
 ===========
 
 [![Build Status](https://travis-ci.org/rgrannell1/bang.png?branch=master)](https://travis-ci.org/rgrannell1/bang)
@@ -31,14 +31,11 @@ First, download the repository from github.
 git clone https://github.com/rgrannell1/bang
 cd bang
 ```
+(The following steps will be automated at a later date)
 
-The firefox plugin can be installed by running the following
-from the firebug terminal (F12) at the firefox start screen. This
-step may be problematic - it didn't seem to work consistently on my Ubuntu Firefox 26.
-
-```
-window.external.addSearchProvider("https://raw2.github.com/rgrannell1/bang/master/bang.xml");
-```
+Copy the "bang.xml" file into your "firefox/xxxxxxx.default/searchplugins" folder;
+if it doesn't exist create it. You can then set the search engine to "Bang!"
+in Firefox.
 
 The node server can then be executed manually (it defaults to running on port
 8125).
