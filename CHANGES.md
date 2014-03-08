@@ -57,3 +57,7 @@ to 0.3.1.
 
 - Added gmail support.
 
+### 8 March 2014
+
+- Changed localhost reference from 127.0.0.1 to localhost. Incremented
+to 0.3.4.
