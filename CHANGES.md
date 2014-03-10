@@ -61,3 +61,9 @@ to 0.3.1.
 
 - Changed localhost reference from 127.0.0.1 to localhost. Incremented
 to 0.3.4.
+
+### 10 Match 2014
+
+- Fixed the last version, bumped to 0.3.5. Test added to prevent the same
+bug occurring again.
+
