@@ -86,3 +86,34 @@ is = {
 	}
 
 } )()
+
+;( function () {
+	/*
+		Check that every pattern begins with '!'.
+	*/
+
+	const engines = enginesFile.engines
+
+	var patternSet = []
+
+	for (key in engines) {
+		if (!engines.hasOwnProperty(key)) {
+			continue
+		}
+
+		var engine = engines[key]
+		patternSet = patternSet.concat(engine.patterns)
+	}
+
+	for (key in patternSet) {
+
+		var pattern = patternSet[key]
+
+		assert(
+			pattern.charAt(0) === "!" ||
+			pattern === "@",
+			"not prefixed with ! character : " + pattern)
+
+	}
+
+} )()

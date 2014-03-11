@@ -62,8 +62,13 @@ to 0.3.1.
 - Changed localhost reference from 127.0.0.1 to localhost. Incremented
 to 0.3.4.
 
-### 10 Match 2014
+### 10 March 2014
 
 - Fixed the last version, bumped to 0.3.5. Test added to prevent the same
 bug occurring again.
 
+### 11 March 2014
+
+- Added documentation for installing on Chromium (no code changes needed).
+- Bumped to 0.3.6, after fixing bug with non '!' prefixed patterns. A test was
+added to ensure all patterns have this prefix.

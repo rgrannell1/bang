@@ -1,4 +1,4 @@
-Bang! v0.3.5
+Bang! v0.3.6
 ===========
 
 [![Build Status](https://travis-ci.org/rgrannell1/bang.png?branch=master)](https://travis-ci.org/rgrannell1/bang)
@@ -18,7 +18,7 @@ It is currently only supported for Firefox, since that's my browser of choice.
 
 ### 1 Requirements
 
-* Firefox (tested on 26)
+* Firefox (tested on >= v26) or Chromium/Chrome >= v32
 * Ubuntu, or possibly another UNIX distro. (tested on Ubuntu 13.10)
 * Node.js v0.10.20
 * Node forever
@@ -31,11 +31,36 @@ First, download the repository from github.
 git clone https://github.com/rgrannell1/bang
 cd bang
 ```
-(The following steps will be automated at a later date)
+
+DEVELOPERS NOTE: Adding Bang! to your browser will be made easier in the future. The canonical
+methods of using window.external.addSearchProvider or embedded search links do not reliably work
+on my test hardware.
+
+#### 2.1 Firefox
 
 Copy the "bang.xml" file into your "firefox/xxxxxxx.default/searchplugins" folder;
 if it doesn't exist create it. You can then set the search engine to "Bang!"
 in Firefox.
+
+#### 2.2 Chromium / Chrome
+
+Navigate to Chromium's search engine settings at the following url
+
+```
+chrome://settings/searchEngines
+```
+
+and add the following data to the form at the bottom of the page.
+
+```
+"Add a new search engine    keyword    URL with %s in place of query"
+
+Bang!                       bang       http://localhost:8125/?q=%s
+```
+
+Hover over the new entry, and click "Make Default. Bang! should now be working.
+
+#### 2.3 Install the Local Node Server
 
 The node server can then be executed manually (it defaults to running on port
 8125).
@@ -64,10 +89,7 @@ crontab -e
 @reboot /home/user/absolute_path_to_bang_cronjob.py
 ```
 
-Switching that path for the path to the shell script included in this
-repository.
-
-After all you need to reboot to start the cron job,
+Make sure to replace the mock URL with your real URL. Now you need to reboot (eventually) to start the cron job,
 and then you should be ready to go!
 
 ### 3 License
