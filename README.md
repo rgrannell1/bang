@@ -32,9 +32,9 @@ git clone https://github.com/rgrannell1/bang
 cd bang
 ```
 
-DEVELOPERS NOTE: Adding Bang! to your browser will be made easier in the future. The canonical
+*DEVELOPERS NOTE: Adding Bang! to your browser will be made easier in the future. The canonical
 methods of using window.external.addSearchProvider or embedded search links do not reliably work
-on my test hardware.
+on my test hardware.*
 
 #### 2.1 Firefox
 
