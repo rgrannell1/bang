@@ -3,16 +3,16 @@ Bang! v0.3.5
 
 [![Build Status](https://travis-ci.org/rgrannell1/bang.png?branch=master)](https://travis-ci.org/rgrannell1/bang)
 
-Bang! (a nod to Bing) is a metasearch engine. It uses shorthands
+Bang! (an homage to Bing) is a metasearch engine. It uses shorthands
 like "!w Alpaca" or "! how to buy an Alpaca" to search other search engines
 and websites and brings you straight to your results.
 
 **Bang!** is inspired by DuckDuckGo's '!' syntax, but with some key differences. **Bang!**
-is locally hosted so your data is not shared with DuckDuckGo during redirection.
-**Bang!** also can redirect to locally hosted webapps running on specific ports using
-"@ 8910" syntax.
+is locally hosted, so you don't need to give your query to DuckDuckGo for processing. **Bang!** is also more 
+performant than using a third-party for redirection, and can also redirect to locally hosted webapps 
+running on specific ports using "@ 8910" syntax.
 
-It is currently only supported for Firefox, since that's my browser of choice.
+**Bang!** is currently supported on new versions of Firefox and Chromium / Chrome.
 
 <img src="example.gif"> </img>
 
