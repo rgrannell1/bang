@@ -5,6 +5,8 @@ const enginesFile =
 	require('../lib/engines.js')
 const url =
 	require('url')
+const dns =
+	require('dns')
 
 is = {
 	regExp:
@@ -53,38 +55,13 @@ is = {
 
 		var pattern = patternSet[key]
 
+
+
 		assert(
 			count(pattern, patternSet) === 1,
 			"duplicate bang pattern: " + pattern)
 
 	}
-} )()
-
-
-;( function () {
-	/*
-		Check that every url has an associated acceptable
-		protocol.
-	*/
-
-	const engines = enginesFile.engines
-
-	for (key in engines) {
-		if (!engines.hasOwnProperty(key)) {
-			continue
-		}
-
-		var engine = engines[key]
-		var protocol = url.
-			parse(engine.response("")).
-			protocol
-
-		// null allows for local bang help-page
-		assert(
-			protocol === null || protocol === "http:" || protocol === "https:" || protocol === "null",
-			"invalid search engine protocol: " + protocol)
-	}
-
 } )()
 
 ;( function () {
@@ -114,6 +91,34 @@ is = {
 			pattern === "@",
 			"not prefixed with ! character : " + pattern)
 
+	}
+
+} )()
+
+;( function () {
+	/*
+		Check if the pattern URs resolve. This test won't throw
+		errors but will log any problems.
+	*/
+
+	const engines = enginesFile.engines
+
+	for (key in engines) {
+		if (!engines.hasOwnProperty(key)) {
+			continue
+		}
+
+		var engine = engines[key]
+
+		var siteUrl = engine.hostName
+		console.log(url.parse(siteUrl))
+
+		dns.resolve4(siteUrl, function (err, addresses) {
+			if (err) {
+				console.log(err)
+				console.log("couldn't resolve URL. This could be a problem with the url " + siteUrl)
+			}
+		})
 	}
 
 } )()
