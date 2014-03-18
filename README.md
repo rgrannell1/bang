@@ -106,8 +106,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ### 4 Versioning
 
-<img src="semver.svg"> </img>
-
 All versions post 0.3.6 will be compliant with the Semantic Versioning 2.0.0 standard.
 
 http://semver.org/
