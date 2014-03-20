@@ -72,3 +72,8 @@ bug occurring again.
 - Added documentation for installing on Chromium (no code changes needed).
 - Bumped to 0.3.6, after fixing bug with non '!' prefixed patterns. A test was
 added to ensure all patterns have this prefix.
+
+### 20 March 2014
+
+- Moved to the semantic versioning 2.0.0 standard, which means future version
+numbers will have precise meanings.

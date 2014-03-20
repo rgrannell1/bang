@@ -1,4 +1,4 @@
-Bang! v0.3.6
+Bang! v0.4.6
 ===========
 
 [![Build Status](https://travis-ci.org/rgrannell1/bang.png?branch=master)](https://travis-ci.org/rgrannell1/bang)
@@ -108,6 +108,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ![Semver Badge](semver.svg)
 
-All versions post 0.3.6 will be compliant with the Semantic Versioning 2.0.0 standard.
+All versions post 0.3.6 comply with the Semantic Versioning 2.0.0 standard.
 
 http://semver.org/
