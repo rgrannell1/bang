@@ -77,3 +77,8 @@ added to ensure all patterns have this prefix.
 
 - Moved to the semantic versioning 2.0.0 standard, which means future version
 numbers will have precise meanings.
+
+### 21 March 2014
+
+- Released 0.4.6, which improved internal tests and error message support.
+- Released 0.5.6, and added "open source report card" engine support.
