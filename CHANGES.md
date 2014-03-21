@@ -84,3 +84,5 @@ numbers will have precise meanings.
 - Released 0.5.6, and added "open source report card" engine support.
 - Released 0.6.6, which adds version numbers to the about page and improves the generation
 of help pages internally.
+- Released 0.7.6, which adds better patterns for stack exchange sites (stackmath, stackubuntu...).
+Also adds better regular expression escaping to patterns.
