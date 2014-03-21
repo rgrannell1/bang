@@ -1,4 +1,4 @@
-Bang! v0.3.6
+Bang! v0.4.6
 ===========
 
 [![Build Status](https://travis-ci.org/rgrannell1/bang.png?branch=master)](https://travis-ci.org/rgrannell1/bang)
@@ -8,8 +8,8 @@ like "!w Alpaca" or "! how to buy an Alpaca" to search other search engines
 and websites and brings you straight to your results.
 
 **Bang!** is inspired by DuckDuckGo's '!' syntax, but with some key differences. **Bang!**
-is locally hosted, so you don't need to give your query to DuckDuckGo for processing. **Bang!** is also more 
-performant than using a third-party for redirection, and can also redirect to locally hosted webapps 
+is locally hosted, so you don't need to give your query to DuckDuckGo for processing. **Bang!** is also more
+performant than using a third-party for redirection, and can also redirect to locally hosted webapps
 running on specific ports using "@ 8910" syntax.
 
 **Bang!** is currently supported on new versions of Firefox and Chromium / Chrome.
@@ -103,3 +103,9 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+### 4 Versioning
+
+![Semver Badge](semver.svg)
+
+All versions post 0.3.6 comply with the Semantic Versioning 2.0.0 standard.
