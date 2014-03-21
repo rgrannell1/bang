@@ -82,3 +82,5 @@ numbers will have precise meanings.
 
 - Released 0.4.6, which improved internal tests and error message support.
 - Released 0.5.6, and added "open source report card" engine support.
+- Released 0.6.6, which adds version numbers to the about page and improves the generation
+of help pages internally.
