@@ -86,3 +86,7 @@ numbers will have precise meanings.
 of help pages internally.
 - Released 0.7.6, which adds better patterns for stack exchange sites (stackmath, stackubuntu...).
 Also adds better regular expression escaping to patterns.
+
+### 22 March 2014
+
+- Releases 0.8.6, which adds links to the dynamically generated help page.
