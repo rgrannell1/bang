@@ -43,7 +43,7 @@
 	<div id="list-container">
 		<h2>Bang Patterns</h2>
 
-		<p>Bang! v0.7.6</p>
+		<p>Bang! v0.8.6</p>
 
 		<p id="description">
 		This is a list of all available bang patterns and their corresponding
@@ -73,14 +73,22 @@
 				return elem
 			},
 		"td":
-			function (text) {
+			function (inner) {
 				var elem = document.createElement("td")
+
+				elem.appendChild(inner)
+
+				return elem
+			},
+		"a":
+			function (text, href) {
+				var elem = document.createElement("a")
+				elem.setAttribute('href', href)
 
 				elem.appendChild(document.createTextNode(text))
 
 				return elem
 			}
-
 
 	}
 
@@ -99,7 +107,10 @@
 
 		bangTable.
 		appendChild(
-			tags.tr( tags.td(patternString), tags.td(hostname) ))
+			tags.tr(
+				tags.td(document.createTextNode(patternString)),
+				tags.td(tags.a(hostname, "http://" + hostname))
+		))
 
 	}
 
