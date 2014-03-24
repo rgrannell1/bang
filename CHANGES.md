@@ -90,3 +90,7 @@ Also adds better regular expression escaping to patterns.
 ### 22 March 2014
 
 - Releases 0.8.6, which adds links to the dynamically generated help page.
+
+### 24 March 2014
+
+- Release 0.8.7, which fixes an issue with gmail support not working with search.
