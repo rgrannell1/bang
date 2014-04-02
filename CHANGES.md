@@ -94,3 +94,12 @@ Also adds better regular expression escaping to patterns.
 ### 24 March 2014
 
 - Release 0.8.7, which fixes an issue with gmail support not working with search.
+
+### 25 March 2014
+
+- Released 0.8.8, which fixes an breaking bug involving redeclaration of a const. Tests to
+ensure this won't happen again will be added at a later date.
+
+### 2 April 2014
+
+- Released 0.9.8, and implemented support for google news.
