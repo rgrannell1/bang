@@ -99,3 +99,7 @@ Also adds better regular expression escaping to patterns.
 
 - Released 0.8.8, which fixes an breaking bug involving redeclaration of a const. Tests to
 ensure this won't happen again will be added at a later date.
+
+### 2 April 2014
+
+- Released 0.9.8, and implemented support for google news.
