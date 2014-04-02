@@ -86,8 +86,9 @@ Now edit the crontab and add the following line to the end
 
 ```bash
 crontab -e
-@reboot /home/user/absolute_path_to_bang_cronjob.py
+@reboot /home/user/bang/bang-cronjob.py
 ```
+Replacing the example path with the location of the cronjob on your machine.
 
 Make sure to replace the mock URL with your real URL. Now you need to reboot (eventually) to start the cron job,
 and then you should be ready to go!
