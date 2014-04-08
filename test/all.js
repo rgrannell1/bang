@@ -105,21 +105,17 @@ is = {
 
 	const engines = enginesFile.engines
 
-	for (key in engines) {
-		if (!engines.hasOwnProperty(key)) {
-			continue
-		}
+	engines.map(function (engine) {
 
-		const engine = engines[key]
 		const siteUrl = engine.hostName
+		dns.resolve4(siteUrl.replace('/', ''), function (err, addresses) {
 
-		dns.resolve4(siteUrl, function (err, addresses) {
 			if (err) {
-				//console.log(err)
-				//console.log("couldn't resolve URL. This could be a problem with the url " + siteUrl)
+				console.log("note: couldn't resolve URL. This could be a problem with the url " + siteUrl)
 			}
 		})
-	}
+
+	})
 
 } )()
 

@@ -103,3 +103,8 @@ ensure this won't happen again will be added at a later date.
 ### 2 April 2014
 
 - Released 0.9.8, and implemented support for google news.
+
+### 8 April 2014
+
+- Release 0.10.9, a substantial release. Added support for german, canadian and us amazon
+sites. Fixed a potential issue with google news, and added tests to ensure all base url's work.
