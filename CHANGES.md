@@ -106,5 +106,9 @@ ensure this won't happen again will be added at a later date.
 
 ### 8 April 2014
 
-- Release 0.10.9, a substantial release. Added support for german, canadian and us amazon
+- Released 0.10.9, a substantial release. Added support for german, canadian and us amazon
 sites. Fixed a potential issue with google news, and added tests to ensure all base url's work.
+
+### 10 April 2014
+
+- Released 0.11.9 which adds support for colorhexa - a site for looking up colour hex codes.
