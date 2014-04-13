@@ -1,4 +1,4 @@
-Bang! v0.11.9
+Bang! v0.11.10
 ===========
 
 [![Build Status](https://travis-ci.org/rgrannell1/bang.png?branch=master)](https://travis-ci.org/rgrannell1/bang)

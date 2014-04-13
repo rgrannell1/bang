@@ -14,19 +14,19 @@ Changes
 
 - First change of the year. Added full name aliases, and case insensitivity.
 
-### 3rd January 2014
+#### 3rd January 2014
 
 - Refactored code to use current ECMAscript 6 features.
 
-### 7th January 2014
+#### 7th January 2014
 
 - Added support for duckduckgo.
 
-### 12th January 2014
+#### 12th January 2014
 
 - Added OED and dictionary.reference support.
 
-### 6th February 2014
+#### 6th February 2014
 
 - Updated the cronjob script to work on every
 computer, not just my own. Rewrote in python.
@@ -34,51 +34,51 @@ computer, not just my own. Rewrote in python.
 banned in Ireland.
 - Removed install.html, as it is currently broken.
 
-### 18th January 2014
+#### 18th January 2014
 
 - Added google "I'm feeling lucky!" search, which
 redirects to their guess for the closest page to your terms.
 
-### 19th January 2014
+#### 19th January 2014
 
 - Added support for stack-exchange metasearch.
 
-### 26th January 2014
+#### 26th January 2014
 
 - Added version number 0.2.0, for compatability with node
 package structure.
 
-### 3 March 2014
+#### 3 March 2014
 
 - Added a locally-hosted helppage under "!about". Incremented
 to 0.3.1.
 
-### 5 March 2014
+#### 5 March 2014
 
 - Added gmail support.
 
-### 8 March 2014
+#### 8 March 2014
 
 - Changed localhost reference from 127.0.0.1 to localhost. Incremented
 to 0.3.4.
 
-### 10 March 2014
+#### 10 March 2014
 
 - Fixed the last version, bumped to 0.3.5. Test added to prevent the same
 bug occurring again.
 
-### 11 March 2014
+#### 11 March 2014
 
 - Added documentation for installing on Chromium (no code changes needed).
 - Bumped to 0.3.6, after fixing bug with non '!' prefixed patterns. A test was
 added to ensure all patterns have this prefix.
 
-### 20 March 2014
+#### 20 March 2014
 
 - Moved to the semantic versioning 2.0.0 standard, which means future version
 numbers will have precise meanings.
 
-### 21 March 2014
+#### 21 March 2014
 
 - Released 0.4.6, which improved internal tests and error message support.
 - Released 0.5.6, and added "open source report card" engine support.
@@ -87,28 +87,32 @@ of help pages internally.
 - Released 0.7.6, which adds better patterns for stack exchange sites (stackmath, stackubuntu...).
 Also adds better regular expression escaping to patterns.
 
-### 22 March 2014
+#### 22 March 2014
 
 - Releases 0.8.6, which adds links to the dynamically generated help page.
 
-### 24 March 2014
+#### 24 March 2014
 
 - Release 0.8.7, which fixes an issue with gmail support not working with search.
 
-### 25 March 2014
+#### 25 March 2014
 
 - Released 0.8.8, which fixes an breaking bug involving redeclaration of a const. Tests to
 ensure this won't happen again will be added at a later date.
 
-### 2 April 2014
+#### 2 April 2014
 
 - Released 0.9.8, and implemented support for google news.
 
-### 8 April 2014
+#### 8 April 2014
 
 - Released 0.10.9, a substantial release. Added support for german, canadian and us amazon
 sites. Fixed a potential issue with google news, and added tests to ensure all base url's work.
 
-### 10 April 2014
+#### 10 April 2014
 
 - Released 0.11.9 which adds support for colorhexa - a site for looking up colour hex codes.
+
+### 13 April 2014
+
+- Released 0.10.10, which now escapes URI components. This fixes issues with search terms containing special characters.
