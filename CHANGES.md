@@ -115,4 +115,13 @@ sites. Fixed a potential issue with google news, and added tests to ensure all b
 
 ### 13 April 2014
 
-- Released 0.10.10, which now escapes URI components. This fixes issues with search terms containing special characters.
+- Released 0.11.10, which now escapes URI components. This fixes issues with search terms containing special characters.
+
+### 15 April 2014
+
+- Released 0.12.10, which adds support for channel9.
+
+### 18 April 2014
+
+- Released 0.13.10, which adds support for reddit.
+- Released 0.14.10, which adds support for Rdocumentation.
