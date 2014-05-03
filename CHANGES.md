@@ -125,3 +125,7 @@ sites. Fixed a potential issue with google news, and added tests to ensure all b
 
 - Released 0.13.10, which adds support for reddit.
 - Released 0.14.10, which adds support for Rdocumentation.
+
+### 3 May 2014
+
+- Released 0.15.10, which adds support for antonym search.
