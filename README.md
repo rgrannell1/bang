@@ -40,7 +40,7 @@ on my test hardware.*
 
 Copy the "bang.xml" file into your "firefox/xxxxxxx.default/searchplugins" folder;
 if it doesn't exist create it. You can then set the search engine to "Bang!"
-in Firefox.
+in Firefox from the dedicated search bar, by going to 'Manage Search Engines'.
 
 #### 2.2 Chromium / Chrome
 
