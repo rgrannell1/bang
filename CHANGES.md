@@ -1,5 +1,3 @@
-Changes
-============
 
 #### 25th December 2013
 - Added '@' alias for localhost redirection to a specified port number.
@@ -128,4 +126,8 @@ sites. Fixed a potential issue with google news, and added tests to ensure all b
 
 ### 3 May 2014
 
-- Released 0.15.10, which adds support for antonym search.
+- Released 15.10, which addeds support for antonym search.
+
+### 17 May 2014
+
+- Bumped to 1.0.0; Bang! is stable and feature complete for the near future.
