@@ -111,7 +111,7 @@ is = {
 
 	engines.map(function (engine) {
 
-		const siteUrl = engine.hostName
+		const siteUrl = engine.hostname
 		dns.resolve4(siteUrl.replace('/', ''), function (err, addresses) {
 
 			if (err) {
@@ -160,7 +160,7 @@ is = {
 
 			patternPairs = patternPairs.concat( [{
 				pattern: pattern,
-				hostName: engine.hostName
+				hostname: engine.hostname
 			}] )
 		}
 
@@ -185,7 +185,7 @@ is = {
 
 		return {
 			pattern: engine.pattern,
-			hostName: engine.hostName,
+			hostname: engine.hostname,
 			terms: terms,
 			query: query
 		}
