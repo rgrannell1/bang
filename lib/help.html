@@ -1,7 +1,6 @@
 
 <html>
 <head>
-	<script type="text/javascript" src="help-data.js"></script>
 	<style type="text/css">
 		/*
 			styling!
@@ -92,27 +91,48 @@
 
 	}
 
+
+
+
+
+	const loadJSON = function (path, callback) {
+
+		var xobj = new XMLHttpRequest()
+
+		xobj.overrideMimeType("application/json")
+		xobj.open("GET", path, true)
+		xobj.onreadstatechange = function () {
+
+			if (xobj.readyState === 4 && xobj.status == "200") {
+				callback(xobj.responseText)
+			}
+
+		}
+
+		xobj.send()
+	}
+
+
+
+
+
 	var bangTable = document.getElementById("bang-table")
 
-	for (ith in helpData) {
+	loadJSON("help-data.json", function (helpData) {
 
-		var engine = helpData[ith]
-		var patternString = engine.
-			patterns.
-			reduce(function (left, right) {
-				return left + ", " + right
-			})
+		JSON.parse(helpData).map(function (engine) {
 
-		var hostname = engine.hostname
+			bangTable.appendChild(
+				tags.tr(
+					tags.td(
+						document.createTextNode(engine.patterns.join()) ),
+					tags.td(
+						tags.a(hostname, "http://" + hostname))
+			))
 
-		bangTable.
-		appendChild(
-			tags.tr(
-				tags.td(document.createTextNode(patternString)),
-				tags.td(tags.a(hostname, "http://" + hostname))
-		))
+		})
 
-	}
+	})
 
 	</script>
 </html>
