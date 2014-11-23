@@ -5,6 +5,7 @@
 
 - Bang now uses path.join to build local URLS, fixed accidental Windows incompatability.
 
+- Reimplemented help page rendering to use templating.
 
 #### 23th November 2014
 

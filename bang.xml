@@ -4,6 +4,6 @@
 	<ShortName>Bang!</ShortName>
 	<Description>A bang syntax search redirector for major search engines.</Description>
 	<InputEncoding>UTF-8</InputEncoding>
-	<Url type="text/html" template="localhost:8125/search/?{searchTerms}"/>
+	<Url type="text/html" template="localhost:8125/search/{searchTerms}"/>
 	<Url type="application/x-suggestions+json" template="localhost:8125?/suggest/{searchTerms}"></Url>
 </OpenSearchDescription>
