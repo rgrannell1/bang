@@ -1,4 +1,11 @@
 
+### 
+
+- Bang now serves a particular js file asyncronously, which may or may not improve performance.
+
+- Bang now uses path.join to build local URLS, fixed accidental Windows incompatability.
+
+
 #### 23th November 2014
 
 - Added support for pocket.
