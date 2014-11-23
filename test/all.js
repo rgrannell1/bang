@@ -97,6 +97,10 @@ is = {
 
 } )()
 
+
+
+
+
 ;( function () {
 	/*
 		Check if the pattern URs resolve. This test won't throw
@@ -118,6 +122,10 @@ is = {
 	})
 
 } )()
+
+
+
+
 
 ;( function () {
 	/*
@@ -194,6 +202,10 @@ is = {
 
 
 })()
+
+
+
+
 
 ;( function () {
 	/*
