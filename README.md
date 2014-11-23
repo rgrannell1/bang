@@ -32,15 +32,19 @@ git clone https://github.com/rgrannell1/bang
 cd bang
 ```
 
-*DEVELOPERS NOTE: Adding Bang! to your browser will be made easier in the future. The canonical
-methods of using window.external.addSearchProvider or embedded search links do not reliably work
-on my test hardware.*
+to upgrade, run
+
+```bash
+rm -rf bang
+git clone https://github.com/rgrannell1/bang
+cd bang
+```
+
+*DEVELOPERS NOTE: Adding Bang! to your browser will be made easier in the future. The canonical methods of using window.external.addSearchProvider or embedded search links do not reliably work on my test hardware.*
 
 #### 2.1 Firefox
 
-Copy the "bang.xml" file into your "firefox/xxxxxxx.default/searchplugins" folder;
-if it doesn't exist create it. You can then set the search engine to "Bang!"
-in Firefox from the dedicated search bar, by going to 'Manage Search Engines'.
+Copy the "bang.xml" file into your "firefox/xxxxxxx.default/searchplugins" folder; if it doesn't exist create it. You can then set the search engine to "Bang!" in Firefox from the dedicated search bar, by going to 'Manage Search Engines'.
 
 #### 2.2 Chromium / Chrome
 
