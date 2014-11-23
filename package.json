@@ -2,7 +2,7 @@
 	"name":
 		"bang",
 	"version":
-		"1.0.0",
+		"1.1.0",
 	"description":
 		"Bang! is a metasearch engine",
 	"scripts": {
