@@ -2,9 +2,7 @@
 ### 
 
 - Bang now serves a particular js file asyncronously, which may or may not improve performance.
-
 - Bang now uses path.join to build local URLS, fixed accidental Windows incompatability.
-
 - Reimplemented help page rendering to use templating.
 
 #### 23th November 2014
@@ -40,8 +38,7 @@
 
 - Updated the cronjob script to work on every
 computer, not just my own. Rewrote in python.
-- Removed kickasstorrents bang, since it's been
-banned in Ireland.
+- Removed kickasstorrents bang, since it's been banned in Ireland.
 - Removed install.html, as it is currently broken.
 
 #### 18th January 2014
