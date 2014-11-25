@@ -3,7 +3,7 @@
                        xmlns:moz="http://www.mozilla.org/2006/browser/search/">
   <ShortName>Bang!</ShortName>
   <Description>A bang syntax search redirector for major search engines.</Description>
-  <Url type="text/html" method="get" template="localhost:8125/search/{searchTerms}"/>
+  <Url type="text/html" method="get" template="localhost:8125/search/?q={searchTerms}"/>
   <Developer></Developer>
   <InputEncoding>UTF-8</InputEncoding>
 </OpenSearchDescription>
