@@ -17,7 +17,7 @@ import os
 
 directory = os.path.dirname(os.path.realpath(__file__))
 
-log_path         = os.path.join(directory, "log.txt")
+log_path         = os.path.join(directory, "bang-cronjob.log")
 bang_script_path = os.path.join(directory, "lib", "bang.js")
 
 

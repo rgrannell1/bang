@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
-	xmlns:moz="http://www.mozilla.org/2006/browser/search/">
-	<ShortName>Bang!</ShortName>
-	<Description>A bang syntax search redirector for major search engines.</Description>
-	<InputEncoding>UTF-8</InputEncoding>
-	 <Url type="text/html" template="localhost:8125/search/{searchTerms}"/>
+                       xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>Bang!</ShortName>
+  <Description>A bang syntax search redirector for major search engines.</Description>
+  <Url type="text/html" method="get" template="localhost:8125/search/{searchTerms}"/>
+  <Developer></Developer>
+  <InputEncoding>UTF-8</InputEncoding>
 </OpenSearchDescription>
