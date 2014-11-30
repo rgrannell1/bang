@@ -1,17 +1,15 @@
 {
-	"name":
-		"bang",
-	"version":
-		"2.1.0",
-	"description":
-		"Bang! is a metasearch engine",
+	"name":        "bang",
+	"version":     "2.1.0",
+	"description": "Bang! is a metasearch engine",
 	"scripts": {
 		"test":
 			"node test/all.js"
 	},
 	"dependencies": {
 		"express": ">=4.10.2",
-		"is":      ">=0.1.0"
+		"is":      ">=0.1.0",
+		"mustache": "*"
 	},
 	"devDependencies": {
 		"test": ">=0.0.5"
