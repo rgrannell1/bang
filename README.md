@@ -35,9 +35,8 @@ cd bang
 to upgrade, run
 
 ```bash
-rm -rf bang
-git clone https://github.com/rgrannell1/bang
-cd bang
+rm -rf ~/bang
+git clone https://github.com/rgrannell1/bang ~/bang
 ```
 
 *DEVELOPERS NOTE: Adding Bang! to your browser will be made easier in the future. The canonical methods of using window.external.addSearchProvider or embedded search links do not reliably work on my test hardware.*
