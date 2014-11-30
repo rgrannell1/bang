@@ -11,7 +11,8 @@
 	},
 	"dependencies": {
 		"express": ">=4.10.2",
-		"is":      ">=0.1.0"
+		"is":      ">=0.1.0",
+		"winston": ">=0.8.3"
 	},
 	"devDependencies": {
 		"test": ">=0.0.5"
