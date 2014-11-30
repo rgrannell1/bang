@@ -1,26 +1,25 @@
 {
-	"name":        "bang",
-	"version":     "2.1.0",
-	"description": "Bang! is a metasearch engine",
+	"name":         "bang",
+	"version":      "2.1.0",
+	"description":  "Bang! is a metasearch engine",
 	"scripts": {
-		"test":
-			"node test/all.js"
+		"test":     "node test/all.js"
 	},
 	"main":         "lib/bang.js",
 	"repository":   {
-		"type": "git",
-		"url":  "https://github.com/rgrannell1/bang"
+		"type":     "git",
+		"url":      "https://github.com/rgrannell1/bang"
 	},
 	"bugs": {
-		"url":  "https://github.com/rgrannell1/bang/issues"
+		"url":      "https://github.com/rgrannell1/bang/issues"
 	},
 	"keywords": ["bang", "search"],
 	"dependencies": {
-		"express": ">=4.10.2",
-		"is":      ">=0.1.0",
+		"express":  ">=4.10.2",
+		"is":       ">=0.1.0",
 		"mustache": "*"
 	},
 	"devDependencies": {
-		"test": ">=0.0.5"
+		"test":     ">=0.0.5"
 	}
 }
