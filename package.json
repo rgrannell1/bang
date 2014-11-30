@@ -6,6 +6,15 @@
 		"test":
 			"node test/all.js"
 	},
+	"main":         "lib/bang.js",
+	"repository":   {
+		"type": "git",
+		"url":  "https://github.com/rgrannell1/bang"
+	},
+	"bugs": {
+		"url":  "https://github.com/rgrannell1/bang/issues"
+	},
+	"keywords": ["bang", "search"],
 	"dependencies": {
 		"express": ">=4.10.2",
 		"is":      ">=0.1.0",
