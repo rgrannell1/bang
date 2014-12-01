@@ -17,7 +17,8 @@
 	"dependencies": {
 		"express":  ">=4.10.2",
 		"is":       ">=0.1.0",
-		"mustache": "*"
+		"mustache": "*",
+		"request":  "*"
 	},
 	"devDependencies": {
 		"test":     ">=0.0.5"
