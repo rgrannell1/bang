@@ -1,9 +1,23 @@
 
-### 
+Bang 2.1.0
+---------------------------------------------------------------------------------
+Date:
+
+ENHANCEMENTS:
 
 - Bang now serves a particular js file asyncronously, which may or may not improve performance.
 - Bang now uses path.join to build local URLS, fixed accidental Windows incompatability.
 - Reimplemented help page rendering to use templating.
+
+
+
+
+
+
+
+
+
+
 
 #### 23th November 2014
 
