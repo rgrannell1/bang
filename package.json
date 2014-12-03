@@ -23,9 +23,6 @@
 		"request":  ">=2.49.0",
 		"bunyan":   ">=1.2.0"
 	},
-	"config": {
-		"port": 8125
-	},
 	"preferGlobal": true,
 	"os": ["linux", "darwin"],
 	"license":      "MIT"
