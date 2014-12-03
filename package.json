@@ -1,6 +1,8 @@
 {
 	"name":         "bang",
 	"version":      "2.1.0",
+	"author":       "Ryan Grannell <r.grannell2@gmail.com>",
+
 	"description":  "Bang! is a metasearch engine",
 	"scripts": {
 		"test":     "node test/all.js"
@@ -17,10 +19,13 @@
 	"dependencies": {
 		"express":  ">=4.10.2",
 		"is":       ">=0.1.0",
-		"mustache": "*",
-		"request":  "*"
+		"mustache": ">=0.8.2",
+		"request":  ">=2.49.1"
 	},
-	"devDependencies": {
-		"test":     ">=0.0.5"
-	}
+	"config": {
+		"port": 8125
+	},
+	"preferGlobal": true,
+	"os": ["linux", "darwin"],
+	"license":      "MIT"
 }
