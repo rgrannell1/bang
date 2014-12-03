@@ -58,7 +58,7 @@ and add the following data to the form at the bottom of the page.
 ```
 "Add a new search engine    keyword    URL with %s in place of query"
 
-Bang!                       bang       http://localhost:8125/?q=%s
+Bang!                       bang       http://localhost:8125/search?q=%s
 ```
 
 Hover over the new entry, and click "Make Default. Bang! should now be working.
