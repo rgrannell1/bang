@@ -1,28 +1,16 @@
 
-const assert =
-	require("assert")
-const enginesFile =
-	require('../lib/engines.js')
-const rd =
-	require('../lib/redirect.js')
-const constants =
-	require('../lib/constants.js')
-const url =
-	require('url')
-const dns =
-	require('dns')
+const assert      = require("assert")
+const enginesFile = require('../lib/engines.js')
+const rd          = require('../lib/redirect.js')
 
-is = {
-	regExp:
-		function (val) {
-			return Object.prototype.toString.call(val) === "[object RegExp]"
-		},
-	array:
-		function (val) {
-			return Object.prototype.toString.call(val) === "[object Array]"
-		},
+const url         = require('url')
+const dns         = require('dns')
 
-}
+const is          = require('is')
+
+
+
+
 
 ;( function () {
 	/*
