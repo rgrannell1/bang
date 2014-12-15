@@ -5,9 +5,13 @@ Date:
 
 ENHANCEMENTS:
 
-- Bang now serves a particular js file asyncronously, which may or may not improve performance.
+- Added preliminary implementation of search suggestions.
+- Improved error message logging.
+- Help page now uses HTML templating via mustache.
+- Bang! now logs on shutdown.
+- Improved route structure.
+- Greatly improved code factoring.
 - Bang now uses path.join to build local URLS, fixed accidental Windows incompatability.
-- Reimplemented help page rendering to use templating.
 
 
 
