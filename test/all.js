@@ -189,16 +189,3 @@ const is          = require('is')
 
 
 })()
-
-
-
-
-
-;( function () {
-	/*
-		check that the default port is always 8125.
-	*/
-
-	console.assert(process.env.port === 8125)
-
-} )()
