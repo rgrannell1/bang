@@ -5,19 +5,13 @@ Date:
 
 ENHANCEMENTS:
 
-- Added preliminary implementation of search suggestions.
+- Added partial, preliminary implementation of search suggestions.
 - Improved error message logging.
 - Help page now uses HTML templating via mustache.
 - Bang! now logs on shutdown.
 - Improved route structure.
 - Greatly improved code factoring.
 - Bang now uses path.join to build local URLS, fixed accidental Windows incompatability.
-
-
-
-
-
-
 
 
 
