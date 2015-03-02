@@ -174,7 +174,7 @@ const is          = require('is')
 		return {
 			pattern: engine.pattern,
 			hostname: engine.hostname,
-			terms: terms,
+			searchTerms: terms,
 			query: query
 		}
 	}
@@ -184,8 +184,7 @@ const is          = require('is')
 		const testQuery = randomQuery()
 		var testRedirect = rd.redirect(testQuery.query)
 
-		assert(
-			testQuery.terms === testRedirect.terms)
+		assert(testQuery.searchTerms === testRedirect.searchTerms, testQuery.searchTerms + ' : ' + testRedirect.searchTerms)
 	}
 
 
