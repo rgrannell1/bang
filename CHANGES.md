@@ -1,17 +1,21 @@
 
 Bang 2.1.0
 ---------------------------------------------------------------------------------
-Date:
+Date: 2015-3-4
 
 ENHANCEMENTS:
 
-- Added partial, preliminary implementation of search suggestions.
-- Improved error message logging.
+- Added preliminary implementation of search suggestions to bang.bas
+- Added Google Calender support.bas
+- Improved error-message logging.
 - Help page now uses HTML templating via mustache.
-- Bang! now logs on shutdown.
+- Bang! now logs uptime on shutdown.
 - Improved route structure.
-- Greatly improved code factoring.
-- Bang now uses path.join to build local URLS, fixed accidental Windows incompatability.
+- Refactored code-base to improve modularity, extensibility.
+- Bang now uses path.join to build local URLS, potentially fixing Windows incompatability.
+- Now uses /search?q={terms} to collect search terms from the browser address bar.
+- Supports setting the baseURL for a search engine manually, to facilitate services with a path component. Closes #2, #3.
+- Now accepts port number as an optional command-line argument.
 
 
 
