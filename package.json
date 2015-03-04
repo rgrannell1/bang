@@ -18,7 +18,7 @@
 	"keywords": ["bang", "search"],
 	"dependencies": {
 		"express":  ">=4.10.2",
-		"is":       ">=0.1.0",
+		"is":       ">=2.0.0",
 		"mustache": ">=0.8.2",
 		"request":  ">=2.49.0",
 		"bunyan":   ">=1.2.0"
