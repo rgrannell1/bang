@@ -87,7 +87,7 @@ package structure.
 
 #### 3 March 2014
 
-- Added a locally-hosted helppage under "!about". Incremented
+- Added a locally-hosted help page under "!about". Incremented
 to 0.3.1.
 
 #### 5 March 2014
