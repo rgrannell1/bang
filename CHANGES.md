@@ -3,6 +3,17 @@ Bang 2.2.0
 ---------------------------------------------------------------------------------
 Date: 2015-5-25
 
+BUG-FIXES:
+
+* Now logs to stderr only, to avoid permission problems.
+
+
+
+
+Bang 2.2.0
+---------------------------------------------------------------------------------
+Date: 2015-5-25
+
 ENHANCEMENTS:
 
 - Bang can now only be accessed from localhost.
