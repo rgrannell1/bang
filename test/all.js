@@ -7,7 +7,7 @@ const url         = require('url')
 const dns         = require('dns')
 
 const is          = require('is')
-
+var request       = require('request')
 
 
 
@@ -116,6 +116,16 @@ const is          = require('is')
 
 
 ;( function () {
+
+	// rd.redirect('!gh')
+
+
+} )()
+
+
+
+
+;( function () {
 	/*
 		Check that pattern substitution always works
 	*/
@@ -189,3 +199,8 @@ const is          = require('is')
 
 
 })()
+
+
+
+
+
