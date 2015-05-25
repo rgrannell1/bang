@@ -25,7 +25,6 @@ var logger     = utils.logger
 
 
 
-
 try {
 
 	BangServer([ ], {port: args['--port']} )
