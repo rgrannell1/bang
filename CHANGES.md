@@ -5,6 +5,8 @@ Date: 2015-5-25
 
 ENHANCEMENTS:
 
+- Bang can now only be accessed from localhost.
+
 - Added a docopt bin script for starting the docopt server.
 
 
