@@ -1,6 +1,10 @@
 
 BIN        = ./node_modules/.bin
 
+
+
+
+
 NODE       = node
 NODE_FLAGS = --harmony_destructuring --harmony_rest_parameters
 
@@ -17,8 +21,13 @@ BUNYAN       = $(BIN)/bunyan
 ESLINT       = $(BIN)/eslint
 ESLINT_FLAGS = --config config/eslint-config.json
 
+## -- Docker
 
+DOCKER         = docker
+CONTAINER_NAME = bang_server
 
+REMAPPED_PORT  = 8125
+DEFAULT_PORT   = 8025
 
 
 SERVER_PATH = lib/
@@ -32,3 +41,9 @@ eslint:
 
 test:
 	$(NODE) $(TEST_PATH)
+
+docker-build:
+	$(DOCKER) build -t $(CONTAINER_NAME) .
+
+docker-run:
+	$(DOCKER) run -p $(REMAPPED_PORT):$(DEFAULT_PORT) $(CONTAINER_NAME)
