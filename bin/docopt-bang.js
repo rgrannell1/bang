@@ -28,7 +28,9 @@ try {
 	BangServer([ ], {port: args['--port']} )
 
 } catch (err) {
-	logger.error('uncaught exception %s', err.message)
+
+	logger.error({message: err.message}, 'uncaught exception.')
+
 }
 
 
