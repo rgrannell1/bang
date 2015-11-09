@@ -1,4 +1,18 @@
 
+Bang 3.3.1
+---------------------------------------------------------------------------------
+Date:
+
+ENHANCEMENTS:
+
+* Added named http status codes.
+
+BUG-FIXES:
+
+* Now accounts for missing responses for search suggestions.
+
+
+
 Bang 2.3.1
 ---------------------------------------------------------------------------------
 Date: 2015-10-28
