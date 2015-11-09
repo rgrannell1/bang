@@ -13,6 +13,8 @@ ENHANCEMENTS:
 
 * Code now validated using strict mode.
 
+* Code now validated using eslint.
+
 * Moved logging to stdout, for easier use with bunyan's CLI tool.
 
 BUG-FIXES:
