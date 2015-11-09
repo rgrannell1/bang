@@ -11,7 +11,11 @@ RUN apt-get install npm -y
 RUN ~/.nvm/nvm.sh install 5.0.0
 RUN ~/.nvm/nvm.sh use 5.0.0
 
+RUN ln -s /usr/bin/nodejs /usr/bin/node
+
 COPY . /src
 RUN cd /src; npm install
+RUN npm install forever -g
+
 EXPOSE 8025
-CMD ["nodejs", "bin/docopt-bang.js --port=8025"]
+CMD ["forever", "--minUptime=1000", "--spinSleepTime=500", "--fifo", "/src/lib/cli/bang.js", "--port=8025"]
