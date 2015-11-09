@@ -1,6 +1,6 @@
 [![Stories in Ready](https://badge.waffle.io/rgrannell1/bang.png?label=ready&title=Ready)](https://waffle.io/rgrannell1/bang)
 
-Bang! v2.3.1
+Bang! v3.3.1
 ===========
 
 [![Build Status](https://travis-ci.org/rgrannell1/bang.png?branch=master)](https://travis-ci.org/rgrannell1/bang)

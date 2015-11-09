@@ -5,7 +5,10 @@ Date:
 
 ENHANCEMENTS:
 
+
 * Added named http status codes.
+
+* Now detects all whitespace when checking if an engine was supplied.
 
 BUG-FIXES:
 
