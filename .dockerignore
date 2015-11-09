@@ -1,5 +1,5 @@
 
-bang.log
-cron.log
 node_modules/*
 !node_modules/bang
+bang.log
+cron.log
