@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/rgrannell1/bang.png?label=ready&title=Ready)](https://waffle.io/rgrannell1/bang)
 
 Bang! v2.3.1
 ===========
