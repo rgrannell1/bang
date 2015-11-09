@@ -24,7 +24,7 @@
     "eslint": "^1.9.0",
     "babel-eslint": "*",
     "express": ">=4.10.2",
-    "is": ">=2.0.0",
+    "is": "rgrannell1/is",
     "mustache": ">=0.8.2",
     "request": ">=2.49.0"
   },
