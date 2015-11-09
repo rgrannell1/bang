@@ -11,6 +11,8 @@ ENHANCEMENTS:
 
 * Updated much of the source code to use ES6.
 
+* Logging no longer uses string interpolation excessively.
+
 * Code now validated using strict mode.
 
 * Code now validated using eslint.
