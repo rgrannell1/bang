@@ -1,40 +1,36 @@
 {
-	"name":         "bang",
-	"version":      "3.3.1",
-	"author":       "Ryan Grannell <r.grannell2@gmail.com>",
-
-	"description":  "Bang! is a metasearch engine",
-
-	"bin": {
-		"bang": "./bin/docopt-bang.js"
-	},
-
-	"scripts": {
-		"test":     "node test/all.js"
-	},
-
-	"main":         "lib/bang.js",
-
-	"repository":   {
-		"type":     "git",
-		"url":      "https://github.com/rgrannell1/bang"
-	},
-
-	"bugs": {
-		"url":      "https://github.com/rgrannell1/bang/issues"
-	},
-
-	"keywords": ["bang", "search"],
-
-	"dependencies": {
-		"express":  ">=4.10.2",
-		"is":       ">=2.0.0",
-		"mustache": ">=0.8.2",
-		"request":  ">=2.49.0",
-		"bunyan":   ">=1.2.0",
-		"docopt":   ">=0.6.2"
-	},
-	"preferGlobal": true,
-	"os": ["linux", "darwin"],
-	"license":      "MIT"
+  "name": "bang",
+  "version": "3.3.1",
+  "author": "Ryan Grannell <r.grannell2@gmail.com>",
+  "description": "Bang! is a metasearch engine",
+  "bin": {
+    "bang": "./bin/docopt-bang.js"
+  },
+  "main": "lib/bang.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rgrannell1/bang"
+  },
+  "bugs": {
+    "url": "https://github.com/rgrannell1/bang/issues"
+  },
+  "keywords": [
+    "bang",
+    "search"
+  ],
+  "dependencies": {
+    "bunyan": ">=1.2.0",
+    "docopt": ">=0.6.2",
+    "eslint": "^1.9.0",
+    "express": ">=4.10.2",
+    "is": ">=2.0.0",
+    "mustache": ">=0.8.2",
+    "request": ">=2.49.0"
+  },
+  "preferGlobal": true,
+  "os": [
+    "linux",
+    "darwin"
+  ],
+  "license": "MIT"
 }

@@ -5,14 +5,21 @@ Date:
 
 ENHANCEMENTS:
 
-
-* Added named http status codes.
-
 * Now detects all whitespace when checking if an engine was supplied.
+
+* Added named http status codes to tidy source code.
+
+* Updated much of the source code to use ES6.
+
+* Code now validated using strict mode.
+
+* Moved logging to stdout, for easier use with bunyan's CLI tool.
 
 BUG-FIXES:
 
 * Now accounts for missing responses for search suggestions.
+
+
 
 
 

@@ -5,13 +5,11 @@
 
 
 
-var doc = [
-	'Usage:',
-	'    bang --port=<port>',
-	'    bang (-h | --help | --version)'
-]
-.join('')
-
+var doc = `
+Usage:
+	bang --port=<port>
+	bang (-h | --help | --version)
+`
 
 
 
