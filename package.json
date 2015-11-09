@@ -4,7 +4,7 @@
   "author": "Ryan Grannell <r.grannell2@gmail.com>",
   "description": "Bang! is a metasearch engine",
   "bin": {
-    "bang": "./bin/docopt-bang.js"
+    "bang": "./lib/cli/bang.js"
   },
   "main": "lib/bang.js",
   "repository": {
