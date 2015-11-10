@@ -5,9 +5,11 @@ Date:
 
 ENHANCEMENTS:
 
-* Added Docker file.
+* Added Docker file for deploying Bang in a container.
 
-* .
+* Moved npm dependencies to devDependencies to improve install speed.
+
+* Removed OS/Linux only OS-requirement from package.json.
 
 
 
