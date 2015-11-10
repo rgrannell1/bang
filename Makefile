@@ -30,7 +30,7 @@ REMAPPED_PORT  = 8125
 DEFAULT_PORT   = 8025
 
 
-SERVER_PATH = lib/
+SERVER_PATH = bang/
 TEST_PATH   = test/all.js
 
 
