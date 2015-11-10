@@ -13,10 +13,14 @@ RUN npm install n -g
 RUN n stable
 
 RUN /bin/echo $(node --version)
+
 RUN npm install forever -g
 
 COPY . /src
 RUN cd /src; npm install
 
 EXPOSE 8025
-CMD ["forever", "--minUptime=1000", "--spinSleepTime=500", "--fifo", "/src/node_modules/bang/cli/bang.js", "--port=8025"]
+
+RUN NODE_ENV=production
+
+CMD ["forever", "--minUptime=1000", "--spinSleepTime=500", "--fifo", "src/node_modules/bang/cli/bang.js", "--port=8025"]

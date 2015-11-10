@@ -3,9 +3,6 @@
   "version": "4.3.1",
   "author": "Ryan Grannell <r.grannell2@gmail.com>",
   "description": "Bang! is a metasearch engine",
-  "bin": {
-    "bang": "./node_modules/bang/cli/bang.js"
-  },
   "main": "lib/bang.js",
   "repository": {
     "type": "git",
@@ -30,10 +27,5 @@
     "mustache": ">=0.8.2",
     "request": ">=2.49.0"
   },
-  "preferGlobal": true,
-  "os": [
-    "linux",
-    "darwin"
-  ],
   "license": "MIT"
 }

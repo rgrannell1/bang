@@ -43,7 +43,10 @@ test:
 	$(NODE) $(TEST_PATH)
 
 docker-build:
-	$(DOCKER) build -t $(CONTAINER_NAME) .
+	$(DOCKER) build --tag=$(CONTAINER_NAME) .
+
+docker-cleanbuild:
+	$(DOCKER) build --no-cache=true --tag=$(CONTAINER_NAME) .
 
 docker-run:
 	$(DOCKER) run -p $(REMAPPED_PORT):$(DEFAULT_PORT) $(CONTAINER_NAME)
