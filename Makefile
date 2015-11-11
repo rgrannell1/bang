@@ -6,6 +6,7 @@ BIN        = ./node_modules/.bin
 
 
 NODE       = node
+NPM        = install
 NODE_FLAGS = --harmony_destructuring --harmony_rest_parameters
 
 # -- Mocha.
@@ -31,16 +32,17 @@ DEFAULT_PORT   = 8025
 
 
 SERVER_PATH = bang/
-TEST_PATH   = test/all.js
-
 
 
 
 eslint:
 	$(ESLINT) $(ESLINT_FLAGS) $(SERVER_PATH)
 
-test:
-	$(NODE) $(TEST_PATH)
+npm-install:
+	$(NPM) install .
+
+test-server:
+	$(MOCHA)
 
 docker-build:
 	$(DOCKER) build --tag=$(CONTAINER_NAME) .

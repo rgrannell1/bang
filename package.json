@@ -11,13 +11,17 @@
   "bugs": {
     "url": "https://github.com/rgrannell1/bang/issues"
   },
+  "scripts": {
+    "test": "make test-server"
+  },
   "keywords": [
     "bang",
     "search"
   ],
   "devDependencies": {
     "eslint": "^1.9.0",
-    "babel-eslint": "*"
+    "babel-eslint": "*",
+    "mocha": "*"
   },
   "dependencies": {
     "bunyan": ">=1.2.0",
