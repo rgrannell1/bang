@@ -10,13 +10,16 @@ var request    = require('request')
 
 
 
-var config = {
-	PORT:             8125,
-	REQUEST_INTERVAL: 25,
-	REDIRECT_STATUS:  307,
+var constants = {
+	PORT:               8125,
+	REQUEST_INTERVAL:   250,
+	REDIRECT_STATUS:    307,
 
-	NO_PATTERN_TESTS: 1000,
-	TEST_DURATION:    10 * (60 * 1000)
+	NO_PATTERN_TESTS:   1000,
+	TEST_DURATION:      10 * (60 * 1000),
+	UPPER_QUERY_LENGTH: 10,
+
+	UNICODE_UPPER_BOUND: 65536
 }
 
 
@@ -24,7 +27,17 @@ var config = {
 
 
 var randomText = ( ) => {
-	return 'test'
+
+	var len = Math.floor(Math.random( ) * constants.UPPER_QUERY_LENGTH)
+
+	var out = ''
+
+	for (var ith = 0; ith < len; ++ith) {
+		out += String.fromCharCode(Math.floor(Math.random( ) * constants.UNICODE_UPPER_BOUND))
+	}
+
+	return out
+
 }
 
 
@@ -34,19 +47,19 @@ var randomText = ( ) => {
 var randomUrl = { }
 
 randomUrl.normalQuery = ( ) => {
-	return `http://localhost:${config.PORT}/search/?q={randomText( )}`
+
+	var path = randomText( )
+	return `http://localhost:${constants.PORT}/search?q=${path}`
+
 }
-
-randomUrl.patternQuery = ( ) => {
-
-}
-
 
 
 
 
 
 var callServer = (url, callback) => {
+
+	console.log( url )
 
 	request({url, followRedirect: false}, (err, res, body) => {
 
@@ -56,7 +69,7 @@ var callServer = (url, callback) => {
 			throw Error('empty server response.')
 		} else {
 
-			if (res.statusCode !== config.REDIRECT_STATUS) {
+			if (res.statusCode !== constants.REDIRECT_STATUS) {
 				throw Error(`invalid response code ${res.statusCode}`)
 			}
 
@@ -82,9 +95,13 @@ fuzzTest.noPattern = (ticksLeft, callback) => {
 			callback( )
 		} else {
 
-			callServer(randomUrl.normalQuery( ), ( ) => {
-				recur(ticksLeft - 1)
-			})
+			setTimeout(( ) => {
+
+				callServer(randomUrl.normalQuery( ), ( ) => {
+					recur(ticksLeft - 1)
+				})
+
+			}, constants.REQUEST_INTERVAL)
 
 		}
 
@@ -100,14 +117,13 @@ fuzzTest.noPattern = (ticksLeft, callback) => {
 
 describe('server redirection.', function ( ) {
 
-	this.timeout(config.TEST_DURATION)
+	this.timeout(constants.TEST_DURATION)
 
 	it('always returns a 3xx status, and never throws an error.', done => {
 
-		bangServer({port: config.PORT, trace: false}, (app, server) => {
+		bangServer({port: constants.PORT, trace: false}, (app, server) => {
 
-			fuzzTest.noPattern(config.NO_PATTERN_TESTS, ( ) => {
-				server.close( )
+			fuzzTest.noPattern(constants.NO_PATTERN_TESTS, ( ) => {
 				done( )
 			})
 
