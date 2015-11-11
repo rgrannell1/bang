@@ -12,11 +12,10 @@ var request    = require('request')
 
 var config = {
 	PORT:             8125,
-	REQUEST_INTERVAL: 50,
+	REQUEST_INTERVAL: 25,
 	REDIRECT_STATUS:  307,
 
-	NO_PATTERN_TESTS: 1000,
-	TEST_DURATION:    10 * (60 * 1000)
+	NO_PATTERN_TESTS: 10000
 }
 
 
@@ -82,11 +81,9 @@ fuzzTest.noPattern = (ticksLeft, callback) => {
 			callback( )
 		} else {
 
-			setTimeout(( ) => {
-
-				callServer(randomUrl.normalQuery( ), recur.bind({ }, ticksLeft - 1))
-
-			}, config.REQUEST_INTERVAL)
+			callServer(randomUrl.normalQuery( ), ( ) => {
+				recur(ticksLeft - 1)
+			})
 
 		}
 
@@ -109,6 +106,7 @@ describe('server redirection.', function ( ) {
 		bangServer({port: config.PORT, trace: false}, (app, server) => {
 
 			fuzzTest.noPattern(config.NO_PATTERN_TESTS, ( ) => {
+				server.close( )
 				done( )
 			})
 
