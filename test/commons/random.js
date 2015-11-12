@@ -4,8 +4,15 @@
 
 
 
+var constants = require('./constants')
 
-var random = { }
+
+
+
+
+var random = {
+	bangURL: { }
+}
 
 
 
@@ -23,6 +30,15 @@ random.fromSet = (upperLength, charset) => {
 	return out.join('')
 
 }
+
+
+
+
+
+random.bangURL.search = (port, upperLength) => {
+	return 'http://localhost:' + port + '/search?q=' + random.fromSet(upperLength, constants.usedUnicode)
+}
+
 
 
 
