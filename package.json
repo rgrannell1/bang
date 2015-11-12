@@ -12,7 +12,8 @@
     "url": "https://github.com/rgrannell1/bang/issues"
   },
   "scripts": {
-    "test": "make test-server"
+    "test": "make test-server",
+    "start": "node bang/cli/bang.js --port=8125"
   },
   "keywords": [
     "bang",
