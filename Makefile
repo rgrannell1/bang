@@ -42,7 +42,7 @@ npm-install:
 	$(NPM) install .
 
 test-server:
-	$(MOCHA)
+	$(MOCHA) --recursive
 
 docker-build:
 	$(DOCKER) build --tag=$(CONTAINER_NAME) .

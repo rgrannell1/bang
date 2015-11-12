@@ -18,7 +18,7 @@ var config = {
 	REQUEST_INTERVAL:   0,
 	REDIRECT_STATUS:    307,
 
-	NO_PATTERN_TESTS:   10000,
+	TESTS:              10 * 1000,
 	TEST_DURATION:      10 * (60 * 1000),
 	UPPER_QUERY_LENGTH: 100,
 
@@ -46,15 +46,11 @@ var callServer = (url, callback) => {
 
 	request({url, followRedirect: false, agent: false}, (err, res, body) => {
 
-		setTimeout(( ) => {
-
-			callback({
-				err,
-				statusCode: res ? res.statusCode : null,
-				url
-			})
-
-		}, 0)
+		setTimeout(callback, 0, {
+			err,
+			statusCode: res ? res.statusCode : null,
+			url
+		})
 
 	})
 
@@ -74,7 +70,9 @@ fuzzTest.noPattern = (ticksLeft, callback) => {
 	var recur = ticksLeft => {
 
 		if (ticksLeft === 0) {
-			callback(testResults, startingTicks)
+
+			setTimeout(callback, startingTicks, testResults)
+
 		} else {
 
 			setTimeout(( ) => {
@@ -102,7 +100,7 @@ fuzzTest.noPattern = (ticksLeft, callback) => {
 
 
 
-describe('# server redirection.', function ( ) {
+describe(`# server redirection (n = ${config.TESTS})`, function ( ) {
 
 	var testResults;
 	this.timeout(config.TEST_DURATION)
@@ -111,7 +109,7 @@ describe('# server redirection.', function ( ) {
 
 		bangServer(config.SERVER_ARGS, (app, server) => {
 
-			fuzzTest.noPattern(config.NO_PATTERN_TESTS, (results) => {
+			fuzzTest.noPattern(config.TESTS, (results) => {
 
 				testResults = results
 				done( )
@@ -126,8 +124,12 @@ describe('# server redirection.', function ( ) {
 
 		testResults.forEach(result => {
 
+			var errString = result.err
+				? ` with ${result.err.toString( )}`
+				: ''
+
 			if (result.statusCode && result.statusCode !== config.REDIRECT_STATUS) {
-				throw Error(`server responsed ${result.statusCode} for ${result.url} with ${result.err.toString( )}`)
+				throw Error(`server responsed ${result.statusCode} for ${result.url}${errString}`)
 			}
 
 		})
