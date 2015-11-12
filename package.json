@@ -21,7 +21,8 @@
   "devDependencies": {
     "eslint": "^1.9.0",
     "babel-eslint": "*",
-    "mocha": "*"
+    "mocha": "*",
+    "longjohn": "*"
   },
   "dependencies": {
     "bunyan": ">=1.2.0",
@@ -29,8 +30,7 @@
     "express": ">=4.10.2",
     "is": "rgrannell1/is",
     "mustache": ">=0.8.2",
-    "request": ">=2.49.0",
-    "longjohn": "*"
+    "request": ">=2.49.0"
   },
   "license": "MIT"
 }

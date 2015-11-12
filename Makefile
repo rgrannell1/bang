@@ -6,7 +6,7 @@ BIN        = ./node_modules/.bin
 
 
 NODE       = node
-NPM        = install
+NPM        = npm
 NODE_FLAGS = --harmony_destructuring --harmony_rest_parameters
 
 # -- Mocha.
@@ -25,6 +25,11 @@ ESLINT_FLAGS = --config config/eslint-config.json
 ## -- Docker
 
 DOCKER         = docker
+
+
+
+
+
 CONTAINER_NAME = bang_server
 
 REMAPPED_PORT  = 8125
@@ -41,13 +46,13 @@ eslint:
 npm-install:
 	$(NPM) install .
 
-test-server:
+test-server: npm-install
 	$(MOCHA) --recursive
 
-docker-build:
+docker-build
 	$(DOCKER) build --tag=$(CONTAINER_NAME) .
 
-docker-cleanbuild:
+docker-cleanbuild
 	$(DOCKER) build --no-cache=true --tag=$(CONTAINER_NAME) .
 
 docker-run:

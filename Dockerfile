@@ -9,12 +9,8 @@ RUN ln -s /usr/bin/nodejs /usr/bin/node
 
 RUN apt-get install npm -y
 RUN npm cache clean -f
-RUN npm install n -g
+RUN npm install forever n -g
 RUN n stable
-
-RUN /bin/echo $(node --version)
-
-RUN npm install forever -g
 
 COPY . /src
 RUN cd /src; npm install
