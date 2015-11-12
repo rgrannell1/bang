@@ -3,8 +3,9 @@
 
 
 
-var bangServer = require('bang/app/bang')
+var util       = require('util')
 var request    = require('request')
+var bangServer = require('bang/app/bang')
 
 var random     = require('../commons/random')
 var constants  = require('../commons/constants')
@@ -29,11 +30,13 @@ config.SERVER_ARGS = {
 
 	port:  config.PORT,
 	trace: false,
-	fatalErrorHandler: err => {
+	fatalErrorHandler: (errors, err) => {
 
 		logger.error({
 			err
 		}, 'Bang! server threw an error for a query')
+
+		errors.push(err)
 
 	}
 }
@@ -102,10 +105,19 @@ fuzzTest.noPattern = (ticksLeft, callback) => {
 
 describe(`# server redirection (n = ${config.TESTS})`, function ( ) {
 
-	var testResults;
+	var testResults
+	var serverErrors = [ ]
+
 	this.timeout(config.TEST_DURATION)
 
+
+
+
+
 	before(done => {
+
+		config.SERVER_ARGS.fatalErrorHandler =
+			config.SERVER_ARGS.fatalErrorHandler.bind({ }, serverErrors)
 
 		bangServer(config.SERVER_ARGS, (app, server) => {
 
@@ -120,7 +132,7 @@ describe(`# server redirection (n = ${config.TESTS})`, function ( ) {
 
 	})
 
-	it(`requests always have responses with a redirect status.`, ( ) => {
+	it(`completed requests always have responses with a redirect status.`, ( ) => {
 
 		testResults.forEach(result => {
 
@@ -133,6 +145,18 @@ describe(`# server redirection (n = ${config.TESTS})`, function ( ) {
 			}
 
 		})
+
+	})
+
+	it("never triggers fatal server errors", ( ) => {
+
+		if (serverErrors.length > 0) {
+
+			throw Error( util.inspect(serverErrors, {
+				depth: null
+			}) )
+
+		}
 
 	})
 
