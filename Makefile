@@ -49,10 +49,10 @@ npm-install:
 test-server: npm-install
 	$(MOCHA) --recursive
 
-docker-build
+docker-build:
 	$(DOCKER) build --tag=$(CONTAINER_NAME) .
 
-docker-cleanbuild
+docker-cleanbuild:
 	$(DOCKER) build --no-cache=true --tag=$(CONTAINER_NAME) .
 
 docker-run:

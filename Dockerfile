@@ -1,15 +1,19 @@
 
 FROM ubuntu:15.10
 
-RUN apt-get update
-
-RUN apt-get install curl git build-essential -y
+RUN apt-get update && apt-get install -y \
+	npm \
+	curl \
+	git \
+	build-essential
 
 RUN ln -s /usr/bin/nodejs /usr/bin/node
 
-RUN apt-get install npm -y
 RUN npm cache clean -f
-RUN npm install forever n -g
+RUN npm install -g \
+	forever \
+	n \
+
 RUN n stable
 
 COPY . /src
