@@ -4,8 +4,8 @@
 
 
 
+var bunyan = require('bunyan')
 
-const bunyan  = require('bunyan')
 
 
 
@@ -29,9 +29,8 @@ serializers.err = err => {
 
 
 
-
 module.exports = bunyan.createLogger({
-	name: "bang! (server)",
+	name: "bang! (testing)",
 	streams: [{
 		stream: process.stdout
 	}],
