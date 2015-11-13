@@ -37,6 +37,7 @@ DEFAULT_PORT   = 8025
 
 
 SERVER_PATH = bang/
+TEST_PATH   = node_modules/bang-test
 
 
 
@@ -47,7 +48,7 @@ npm-install:
 	$(NPM) install .
 
 test-server: npm-install
-	$(MOCHA) --recursive
+	$(MOCHA) $(TEST_PATH) --recursive
 
 docker-build:
 	$(DOCKER) build --tag=$(CONTAINER_NAME) .

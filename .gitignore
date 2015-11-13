@@ -3,3 +3,4 @@ bang.log
 cron.log
 node_modules/*
 !node_modules/bang
+!node_modules/bang-test
