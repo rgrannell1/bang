@@ -1,68 +1,55 @@
 
 <html>
 <head>
+
 	<style type="text/css">
-		/*
-			styling!
-		*/
+
 		html {
-			background:  #EDEDED;
 			font-family: sans-serif;
-			color:       #313739;
+			font-size:   12px;
 		}
 
-		#description {
-			font-style:    italic;
-			width:         600px;
-			margin-bottom: 30px;
+		.patterns {
+			float: right;
 		}
 
-		#list-container {
-
-			background:    white;
-
-			width:         600px;
-			padding:       25px;
-
-			margin:        5% auto;
-
-			border:        1px solid #313739;
-			border-radius: 10px;
+		.patterns li {
+			display:    inline-block;
+			background: lightgray;
+			padding:    1px 12px;
 		}
 
-		td {
-			padding-left: 40px;
-			max-width:    300px;
-			word-wrap:    break-word;
-		}
 
 	</style>
 
 </head>
 <body>
 
-	<div id="list-container">
-		<h2>Bang Patterns</h2>
+	<main>
+		<h2>Bang-v{{version}} Redirect-Patterns</h2>
 
-		<p>Bang! v{{version}}</p>
-
-		<p id="description">
-		This is a list of all available bang patterns and their corresponding
-		search engines. These are liable to change over time.
-		</p>
-
-		<table id="bang-table">
-
+		<ul>
 			{{#engines}}
-			<tr>
-				<td>{{patterns}}</td>
-				<td><a href="{{baseURL}}">{{baseURL}}</a></td>
-			</tr>
+
+				<li>
+					<ul>
+
+						<a href="{{baseURL}}">{{baseURL}}</a>
+
+						<ul class="patterns">
+							{{#patterns}}
+							<li>{{pattern}}</li>
+							{{/patterns}}
+						</ul>
+
+					</ul>
+
+				</li>
+
 			{{/engines}}
+		</ul>
 
-		</table>
-
-	</div>
+	</main>
 
 </body>
 </html>
