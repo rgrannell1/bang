@@ -15,7 +15,15 @@ RUN npm install -g \
 	forever \
 	n
 
+
+
+
+
 RUN n stable
+
+
+
+
 
 COPY . /src
 
