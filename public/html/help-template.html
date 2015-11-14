@@ -6,17 +6,38 @@
 
 		html {
 			font-family: sans-serif;
-			font-size:   12px;
+		}
+
+		h2 {
+			text-align: center;
+		}
+
+		main {
+			text-align: left;
+			padding: 40px 0px;
+		}
+
+		li {
+			list-style-type: none;
+		}
+
+		.engine {
+			padding: 20px 0px;
+		}
+
+		.title {
+
 		}
 
 		.patterns {
-			float: right;
+			float: left;
 		}
 
 		.patterns li {
-			display:    inline-block;
+			display:    inline;
 			background: lightgray;
-			padding:    1px 12px;
+			padding:    2px 12px;
+			margin:     0px 2px;
 		}
 
 
@@ -31,16 +52,18 @@
 		<ul>
 			{{#engines}}
 
-				<li>
+				<li class="engine">
 					<ul>
 
-						<a href="{{baseURL}}">{{baseURL}}</a>
+						<li>
+							<a class="title" href="{{baseURL}}">{{baseURL}}</a>
+						</li>
 
-						<ul class="patterns">
-							{{#patterns}}
-							<li>{{pattern}}</li>
-							{{/patterns}}
-						</ul>
+						<li>
+							<ul class="patterns">
+								{{#patterns}}<li>{{pattern}}</li>{{/patterns}}
+							</ul>
+						</li>
 
 					</ul>
 
