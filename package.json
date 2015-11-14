@@ -25,10 +25,10 @@
   },
   "devDependencies": {
     "eslint": "^1.9.0",
-    "babel-eslint": "*",
-    "mocha": "*",
-    "longjohn": "*",
-    "chai":     "*"
+    "babel-eslint": ">=4.1.4",
+    "mocha": ">=2.3.3",
+    "longjohn": ">=0.2.9",
+    "chai":     ">=3.4.1"
   },
   "dependencies": {
     "bunyan": ">=1.2.0",
