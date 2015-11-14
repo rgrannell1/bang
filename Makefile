@@ -43,6 +43,7 @@ TEST_PATH   = node_modules/bang-test
 
 eslint:
 	$(ESLINT) $(ESLINT_FLAGS) $(SERVER_PATH)
+	$(ESLINT) $(ESLINT_FLAGS) $(TEST_PATH)
 
 npm-install:
 	$(NPM) install .
