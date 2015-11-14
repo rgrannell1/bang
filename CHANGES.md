@@ -1,15 +1,19 @@
 
 Bang 4.3.1
 ---------------------------------------------------------------------------------
-Date:
+Date: 2015-11-14
 
 ENHANCEMENTS:
 
 * Added Docker file for deploying Bang in a container.
 
+* Added silent flag to command-line interface for server.
+
 * Moved npm dependencies to devDependencies to improve install speed.
 
 * Removed OS/Linux only OS-requirement from package.json.
+
+* Removed support for open-source report card, as the website shut down.
 
 
 
