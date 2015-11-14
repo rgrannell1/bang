@@ -28,7 +28,7 @@ RUN n stable
 COPY . /src
 
 WORKDIR /src
-RUN npm install
+RUN npm install --production
 
 EXPOSE 8025
 
