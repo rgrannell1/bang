@@ -48,7 +48,7 @@ eslint:
 npm-install:
 	$(NPM) install .
 
-test-server: npm-install
+test-server:
 	$(MOCHA) $(MOCHA_FLAGS) $(TEST_PATH) --recursive
 
 docker-build:
