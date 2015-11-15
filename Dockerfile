@@ -32,6 +32,4 @@ RUN npm install --production
 
 EXPOSE 8025
 
-RUN NODE_ENV=production
-
 CMD ["forever", "--minUptime=1000", "--spinSleepTime=500", "--fifo", "node_modules/bang/cli/bang.js", "--port=8025"]
