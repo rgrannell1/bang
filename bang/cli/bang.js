@@ -26,7 +26,7 @@ Options:
 
 
 var docopt     = require('docopt').docopt
-var bangServer = require('bang/app/bang')
+var bangServer = require('../app/bang')
 var args       = docopt(doc)
 
 

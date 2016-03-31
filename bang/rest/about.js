@@ -7,11 +7,11 @@
 var fs             = require('fs')
 var mustache       = require('mustache')
 
-var constants      = require('bang/commons/constants')
-var httpStatus     = require('bang/commons/http-status')
-var enginePatterns = require('bang/data/engines.json')
-var logger         = require('bang/logging/logger')
-var Engine         = require('bang/model/engine')
+var constants      = require('../commons/constants')
+var httpStatus     = require('../commons/http-status')
+var enginePatterns = require('../data/engines.json')
+var logger         = require('../logging/logger')
+var Engine         = require('../model/engine')
 
 
 

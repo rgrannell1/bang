@@ -7,9 +7,9 @@
 
 var request    = require('request')
 
-var redirect   = require('bang/redirect')
-var httpStatus = require('bang/commons/http-status')
-var logger     = require('bang/logging/logger')
+var redirect   = require('../redirect')
+var httpStatus = require('../commons/http-status')
+var logger     = require('../logging/logger')
 
 
 

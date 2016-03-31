@@ -6,11 +6,11 @@
 
 
 var is             = require('is')
-var logger         = require('bang/logging/logger')
+var logger         = require('../logging/logger')
 
-var engineTools    = require('bang/engine-tools')
-var enginePatterns = require('bang/data/engines.json')
-var Engine         = require('bang/model/engine')
+var engineTools    = require('../engine-tools')
+var enginePatterns = require('../data/engines.json')
+var Engine         = require('../model/engine')
 
 
 
@@ -32,7 +32,7 @@ redirect.suggest.toSuggestEngine = (config, rawQuery) => {
 	redirect.suggest.toSuggestEngine.precond(config, rawQuery)
 
 	var matchingEngine = engineTools.findMatchingEngine(rawQuery, engines)
-	var searchTerms    = engineTools.extractSearchTerms(rawQuery, matchingEngine)
+	var searchTerms    = engineTools.extractSearchTerms(rawQuery, matchingEngine.patterns)
 	var lookupUrl      = engineTools.suggestTermsToUrl(searchTerms, matchingEngine)
 
 	if (config.trace) {
@@ -66,7 +66,7 @@ redirect.search.toSearchEngine = (config, rawQuery, res) => {
 	redirect.search.toSearchEngine.precond(config, rawQuery, res)
 
 	var matchingEngine = engineTools.findMatchingEngine(rawQuery, engines)
-	var searchTerms    = engineTools.extractSearchTerms(rawQuery, matchingEngine)
+	var searchTerms    = engineTools.extractSearchTerms(rawQuery, matchingEngine.patterns)
 	var redirectUrl    = engineTools.searchTermsToUrl(searchTerms, matchingEngine)
 
 	if (config.trace) {

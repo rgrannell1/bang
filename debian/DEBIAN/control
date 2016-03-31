@@ -1,0 +1,8 @@
+Package: bang
+Version: 4.3.1
+Maintainer: Ryan Grannell <r.grannell2@gmail.com>
+Section: web
+Priority: standard
+Bugs: https://github.com/rgrannell1/bang/issues
+Homepage: https://github.com/rgrannell1/bang
+Description: Bang! is a metasearch engine.

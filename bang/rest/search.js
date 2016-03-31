@@ -5,8 +5,8 @@
 
 
 
-var redirect   = require('bang/redirect')
-var httpStatus = require('bang/commons/http-status')
+var redirect   = require('../redirect')
+var httpStatus = require('../commons/http-status')
 
 
 

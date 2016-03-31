@@ -1,0 +1,85 @@
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides:          bang
+# Required-Start:    $local_fs $network $named $time $syslog
+# Required-Stop:     $local_fs $network $named $time $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start daemon at boot time
+# Description:       Enable service provided by daemon.
+### END INIT INFO
+
+
+
+
+
+set -e
+
+
+
+
+PID_PATH=/var/run/bang.pid
+LOG_PATH=/var/log/bang/bang.log
+
+DAEMON_USER="$USER"
+
+
+
+
+
+start () {
+
+	if [ -f "$PID_PATH" ] && kill -0 $(cat "$PID_PATH")
+	then
+		echo "Service already running." >&2
+		return 1
+	fi
+
+	local start_command="node /opt/bang/bang/cli/bang.js --port 8125"
+
+	echo 'Starting service.' >&2
+
+	su -c "$start_command" "$DAEMON_USER" > "$PID_PATH"
+
+	echo 'Service started.' >&2
+
+}
+
+stop () {
+
+	if [ ! -f "$PID_PATH" ] || ! kill -0 $(cat "$PID_PATH")
+	then
+		echo 'Service not running.' >&2
+		return 1
+	fi
+
+	echo 'Stopping service...' >&2
+	kill -TERM $(cat "$PID_PATH") && rm -f "$PID_PATH"
+	echo 'Service stopped.' >&2
+
+}
+
+restart () {
+
+	stop
+	start
+
+}
+
+
+
+
+
+case "$1" in
+	start)
+		start
+		;;
+	stop)
+		stop
+		;;
+	restart)
+		restart
+		;;
+	*)
+	echo "Usage: $0{start|stop|restart}"
+esac

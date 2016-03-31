@@ -7,7 +7,7 @@
 var is             = require('is')
 var URL            = require('url')
 
-var constants      = require('bang/commons/constants')
+var constants      = require('../commons/constants')
 
 
 
@@ -16,6 +16,12 @@ var engineTools = { }
 
 
 
+
+
+/*
+	given a word, create a regexp that checks for that word
+	surrounded by whitespace.
+*/
 
 engineTools.asPatternRegExp = word => {
 
@@ -50,20 +56,25 @@ engineTools.asPatternRegExp.precond = word => {
 
 
 
-engineTools.extractSearchTerms = (rawQuery, engine) => {
+/*
+	given a query and patterns, remove all occurrences of that
+	engine's patterns from the query.
+*/
 
-	engineTools.extractSearchTerms.precond(rawQuery, engine)
+engineTools.extractSearchTerms = (rawQuery, patterns) => {
 
-	return engine.patterns.reduce((query, pattern) => {
+	engineTools.extractSearchTerms.precond(rawQuery, patterns)
+
+	return patterns.reduce((query, pattern) => {
 		return query.replace(engineTools.asPatternRegExp(pattern), '')
 	}, rawQuery)
 
 }
 
-engineTools.extractSearchTerms.precond = (rawQuery, engine) => {
+engineTools.extractSearchTerms.precond = (rawQuery, patterns) => {
 
 	is.always.string(rawQuery)
-	is.always.object(engine)
+	is.always.array(patterns)
 
 }
 
@@ -71,26 +82,35 @@ engineTools.extractSearchTerms.precond = (rawQuery, engine) => {
 
 
 
-engineTools.testQueryMatch = (rawQuery, engine) => {
+/*
+	given a query, check if it matches any pattern supplied
+	(with an added word boundary).
+*/
 
-	engineTools.testQueryMatch.precond(rawQuery, engine)
+engineTools.testQueryMatch = (rawQuery, patterns) => {
 
-	return engine.patterns.some(pattern => {
+	engineTools.testQueryMatch.precond(rawQuery, patterns)
+
+	return patterns.some(pattern => {
 		return engineTools.asPatternRegExp(pattern).test(rawQuery)
 	})
 
 }
 
-engineTools.testQueryMatch.precond = (rawQuery, engine) => {
+engineTools.testQueryMatch.precond = (rawQuery, patterns) => {
 
 	is.always.string(rawQuery)
-	is.always.object(engine)
+	is.always.array(patterns)
 
 }
 
 
 
 
+
+/*
+	find a default engine from the list of supplied engines.
+*/
 
 engineTools.defaultEngine = engines => {
 
@@ -114,11 +134,20 @@ engineTools.defaultEngine.precond = engines => {
 
 
 
+
+
+/*
+	given a query and a list of engines, find the
+	first matching engine object. Fallback to a default engine.
+*/
+
 engineTools.findMatchingEngine = (rawQuery, engines) => {
 
 	engineTools.findMatchingEngine.precond(rawQuery)
 
-	var matchingEngines = engines.filter(engineTools.testQueryMatch.bind({ }, rawQuery))
+	var matchingEngines = engines.filter(engine => {
+		return engineTools.testQueryMatch(rawQuery, engine.patterns)
+	})
 
 	return matchingEngines.length > 0
 		? matchingEngines[0]
@@ -133,6 +162,11 @@ engineTools.findMatchingEngine.precond = rawQuery => {
 
 
 
+
+/*
+	given the search terms supplied in a query, and an engine,
+	return the redirected search URL.
+*/
 
 engineTools.searchTermsToUrl = (searchTerms, engine) => {
 
@@ -154,6 +188,11 @@ engineTools.searchTermsToUrl.precond = (searchTerms, engine) => {
 
 
 
+
+/*
+	given the search terms supplied in a query, and an engine,
+	return the redirected suggest URL.
+*/
 
 engineTools.suggestTermsToUrl = (searchTerms, engine) => {
 

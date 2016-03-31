@@ -59,3 +59,6 @@ docker-cleanbuild:
 
 docker-run:
 	$(DOCKER) run -p $(REMAPPED_PORT):$(DEFAULT_PORT) $(CONTAINER_NAME)
+
+package-deb:
+	echo ''

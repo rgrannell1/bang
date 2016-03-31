@@ -7,15 +7,15 @@
 
 var is         = require('is')
 var express    = require('express')
-var constants  = require('bang/commons/constants')
+var constants  = require('../commons/constants')
 
-var commons    = require('bang/commons/commons')
-var logger     = require('bang/logging/logger')
+var commons    = require('../commons/commons')
+var logger     = require('../logging/logger')
 
 var rest       = {
-	suggest: require('bang/rest/suggest'),
-	search:  require('bang/rest/search'),
-	about:   require('bang/rest/about')
+	suggest: require('../rest/suggest'),
+	search:  require('../rest/search'),
+	about:   require('../rest/about')
 }
 
 
