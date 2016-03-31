@@ -6,11 +6,11 @@
 
 
 var is             = require('is')
-var logger         = require('../logging/logger')
+var logger         = require('./logging/logger')
 
-var engineTools    = require('../engine-tools')
-var enginePatterns = require('../data/engines.json')
-var Engine         = require('../model/engine')
+var engineTools    = require('./engine-tools')
+var enginePatterns = require('./data/engines.json')
+var Engine         = require('./model/engine')
 
 
 
