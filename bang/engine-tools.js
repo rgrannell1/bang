@@ -7,7 +7,7 @@
 var is             = require('is')
 var URL            = require('url')
 
-var constants      = require('../commons/constants')
+var constants      = require('./commons/constants')
 
 
 
