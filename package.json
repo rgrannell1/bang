@@ -5,6 +5,9 @@
   "author": "Ryan Grannell <r.grannell2@gmail.com>",
   "description": "Bang! is a metasearch engine",
   "main": "lib/bang.js",
+  "bin": {
+    "bang": "bang/cli/bang.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/rgrannell1/bang"
